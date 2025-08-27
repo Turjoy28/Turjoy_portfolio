@@ -325,7 +325,7 @@ a {
    color: white;
   font-size: 5rem;
  
-   padding-top: 20rem;
+   padding-top: 17rem;
    
    display: flex;
    justify-content: center ;
@@ -346,7 +346,7 @@ a {
    gap: 6rem;
    color: white;
    font-size: 1.9rem;
-   padding: 19rem 13%;
+   padding: 10rem 13%;
 
 }
 .Services_container .Services_box {
@@ -424,9 +424,9 @@ a {
    grid-template-columns: 1fr 2fr;
    gap: 15rem;
    color: white;
-    padding: 18rem 14%;
-
-
+    padding: 20rem 15%;
+    padding-top: 32rem;
+   padding-bottom: 35rem;
 
 }
 
@@ -603,6 +603,7 @@ a {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 3rem;
+   padding-bottom: 16rem;
 }
 .Portfolio_detail{
    display: none;
@@ -634,6 +635,9 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+   padding-top: -15rem;
+  padding-bottom: 25rem;
+  position: relative;
 }
 
 .Portfolio_box p{
