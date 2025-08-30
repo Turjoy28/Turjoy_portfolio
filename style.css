@@ -8,6 +8,7 @@
    box-sizing: border-box;
    font-family: 'Poppins', sans-serif;
 }
+
 :root {
 
    --bg-color: #1f242d;
@@ -89,14 +90,14 @@ a {
 }
 
 .page-section {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+   display: none;
+   opacity: 0;
+   transition: opacity 0.5s ease;
 }
 
 .page-section.active {
-  display: block;
-  opacity: 1;
+   display: block;
+   opacity: 1;
 }
 
 
@@ -105,7 +106,7 @@ a {
 
 .Home {
    display: flex;
-   
+
    align-items: center;
    padding: 60px 9% 0;
    color: aliceblue;
@@ -293,62 +294,64 @@ a {
 }
 
 .bar-animation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  z-index: -1;
-  overflow: hidden;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   z-index: -1;
+   overflow: hidden;
 }
 
 .bar-animation .bar {
-  flex: 1;
-  height: 100%;
-  background: #1f242d;
-  transform: translateY(-100%);
-  animation: show-bars 0.5s ease-in-out forwards;
-  animation-delay: calc(0.1s * var(--i));
+   flex: 1;
+   height: 100%;
+   background: #1f242d;
+   transform: translateY(-100%);
+   animation: show-bars 0.5s ease-in-out forwards;
+   animation-delay: calc(0.1s * var(--i));
 }
 
 
 
 @keyframes show-bars {
-  100% {
-    transform: translateY(0%);
-  }
+   100% {
+      transform: translateY(0%);
+   }
 }
 
-.heading{
-   
+.heading {
+
    color: white;
-  font-size: 5rem;
- 
+   font-size: 5rem;
+
    padding-top: 17rem;
-   
+
    display: flex;
-   justify-content: center ;
-   
+   justify-content: center;
+
 
 }
-.heading span{
+
+.heading span {
    color: var(--main-color);
    padding-left: 0.7vw;
-   
+
 
 }
 
- .Services_container {
+.Services_container {
    display: grid;
-  
-   grid-template-columns: repeat(auto-fit, minmax(50rem,1fr));
+
+   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
    gap: 6rem;
    color: white;
    font-size: 1.9rem;
    padding: 10rem 13%;
 
 }
+
 .Services_container .Services_box {
    padding: 5rem 2.5rem;
    background: var(--second-bg-color);
@@ -358,74 +361,78 @@ a {
 
 }
 
-.Services_container .Services_box:hover{
+.Services_container .Services_box:hover {
    border-color: var(--main-color);
    transform: scale(1.06);
 }
 
-.Services_box .icon{
+.Services_box .icon {
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding-bottom: 1.1vw;
 }
 
-.Services_box .icon i{
+.Services_box .icon i {
    font-size: 3.2rem;
    transition: .5s;
 }
 
-.Services_box:hover .icon :not(a i){
+.Services_box:hover .icon :not(a i) {
    color: var(--main-color);
 }
-.Services_box .icon a{
+
+.Services_box .icon a {
    display: inline-flex;
    background: var(--white-color);
    border-radius: 50%;
    padding: 1rem;
 
 }
-.Services_box:hover .icon a{
+
+.Services_box:hover .icon a {
    background: var(--main-color);
 }
-.Services_box .icon i
-{
+
+.Services_box .icon i {
    font-size: 3rem;
    color: var(--white-color);
    transform: rotate(225deg);
 
 }
 
-.Services_box .icon a i{
+.Services_box .icon a i {
    font-size: 2.6rem;
    color: var(--bg-color);
-   
+
 }
 
 .Services_box .icon a:hover i {
    transform: rotate(175deg);
 }
-.Services_box h3{
+
+.Services_box h3 {
    font-size: 4rem;
    margin: .5rem 0 2rem;
    transition: .6s;
 }
 
-.Services_box:hover h3{
+.Services_box:hover h3 {
    color: var(--main-color);
 
 }
+
 .Services_box p {
    font-size: 1.7rem;
-} 
+}
 
-.resume_container{
+.resume_container {
    display: grid;
    grid-template-columns: 1fr 2fr;
    gap: 15rem;
    color: white;
-    padding: 20rem 15%;
-    padding-top: 32rem;
+   padding: 20rem 15%;
+   padding-top: 32rem;
    padding-bottom: 35rem;
 
 }
@@ -436,15 +443,16 @@ a {
 
 }
 
-.resume_box p{
-   font-size: 1.6rem ;
-}
-.resume_box .desc{
-   margin:  7rem 0 4rem;
-  
+.resume_box p {
+   font-size: 1.6rem;
 }
 
-.resume_box .resume-btn{
+.resume_box .desc {
+   margin: 7rem 0 4rem;
+
+}
+
+.resume_box .resume-btn {
    width: 100%;
    height: 5.3rem;
    background: var(--second-bg-color);
@@ -457,20 +465,21 @@ a {
    cursor: pointer;
 }
 
-.resume_box .resume-btn.active{
+.resume_box .resume-btn.active {
    border-color: var(--main-color);
    color: var(--main-color);
 }
-.resume_detail.active
-{
+
+.resume_detail.active {
    display: block;
 }
 
-.resume_detail.active{
+.resume_detail.active {
    display: block;
 
 }
-.resume_box .heading{
+
+.resume_box .heading {
    font-size: 3.5rem;
    text-align: left;
 }
@@ -479,29 +488,29 @@ a {
    display: none;
 }
 
-.resume_list{
+.resume_list {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
    gap: 3.5rem;
    height: 45rem;
    overflow: auto;
 
 }
 
-.resume_list::-webkit-scrollbar{
+.resume_list::-webkit-scrollbar {
    width: .7rem;
 }
 
-.resume_list::-webkit-scrollbar-thumb{
+.resume_list::-webkit-scrollbar-thumb {
    background: transparent;
    border-radius: 1rem;
 }
 
-.resume_list:hover::-webkit-scrollbar-thumb{
+.resume_list:hover::-webkit-scrollbar-thumb {
    background: var(--main-color);
 }
 
-.resume_list .resume_item{
+.resume_list .resume_item {
    background: var(--second-bg-color);
    border-radius: .8rem;
    padding: 3rem 2.5rem;
@@ -512,11 +521,11 @@ a {
 
 }
 
-.resume_item .year{
+.resume_item .year {
    color: var(--main-color);
 }
 
-.resume_item h3{
+.resume_item h3 {
    font-size: 2.2rem;
 }
 
@@ -526,7 +535,7 @@ a {
    margin-bottom: 2rem;
 }
 
-.resume_item .company::before{
+.resume_item .company::before {
    content: '';
    position: absolute;
    top: 50%;
@@ -552,13 +561,14 @@ a {
 .resume_detail.skill .resume_item i {
    font-size: 8.5rem;
    transition: .5s;
-   
+
 }
 
 .resume_detail.skill .resume_item:hover i {
    color: var(--main-color);
 }
-.resume_detail.resume_detail.skill .resume_item span{
+
+.resume_detail.resume_detail.skill .resume_item span {
    position: absolute;
    top: -20%;
    background: var(--white-color);
@@ -572,53 +582,57 @@ a {
    transition: .2s;
 }
 
-.resume_detail.resume_detail.skill .resume_item:hover span{
+.resume_detail.resume_detail.skill .resume_item:hover span {
    top: -25%;
    opacity: 1;
    transform: scale(1);
 }
 
-.resume_detail.about .resume_list{
-   height:  auto;
-   grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+.resume_detail.about .resume_list {
+   height: auto;
+   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 
 }
-.resume_detail.about .resume_item{
+
+.resume_detail.about .resume_item {
    height: auto;
    padding: 0 0 0.5rem;
    background: transparent;
 }
-.resume_detail.about .resume_item p{
-   color:  var(--main-color);
+
+.resume_detail.about .resume_item p {
+   color: var(--main-color);
    font-size: 2rem;
 }
 
-.resume_detail.about .resume_item p span{
+.resume_detail.about .resume_item p span {
    color: var(--white-color);
    margin-left: 1rem;
    font-size: 1.7rem;
 }
 
-.Portfolio_container{
+.Portfolio_container {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 3rem;
    padding-bottom: 16rem;
 }
-.Portfolio_detail{
+
+.Portfolio_detail {
    display: none;
 }
 
-.Portfolio_box .numb{
+.Portfolio_box .numb {
    font-size: 8rem;
    -webkit-text-stroke: .07rem var(--white-color);
    color: transparent;
    line-height: 1;
- 
+
 }
-.Portfolio_detail.active{
+
+.Portfolio_detail.active {
    position: relative;
-    display: block;
+   display: block;
    padding-left: 35%;
    padding-top: 12rem;
    color: white;
@@ -626,40 +640,41 @@ a {
    padding-top: 8rem;
 }
 
-.Portfolio_box h3{
+.Portfolio_box h3 {
    font-size: 3.5rem;
    margin: .8rem 0 2rem;
 
 }
+
 .Portfolio_box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    padding-top: -15rem;
-  padding-bottom: 25rem;
-  position: relative;
+   padding-bottom: 25rem;
+   position: relative;
 }
 
-.Portfolio_box p{
+.Portfolio_box p {
    font-size: 1.6rem;
 }
 
-.Portfolio_box .tech{
+.Portfolio_box .tech {
    margin: 2rem 0;
    color: var(--main-color);
    border-bottom: .1rem solid var(--white-color);
    padding-bottom: 2rem;
-  
+
 }
 
-.Portfolio_box .tech{
+.Portfolio_box .tech {
    margin: 2rem 0;
    color: var(--main-color);
    border-bottom: .1rem solid var(--white-color);
    padding-bottom: 2rem;
 }
 
-.Portfolio_box .live_github a{
+.Portfolio_box .live_github a {
    position: relative;
    display: inline-flex;
    padding: 1.3rem;
@@ -673,17 +688,18 @@ a {
 .Portfolio_box .live_github a:first-child {
    margin-right: 1.5rem;
 }
-.Portfolio_box .live_github a:hover{
+
+.Portfolio_box .live_github a:hover {
    color: var(--main-color);
 }
 
 
 
-.Portfolio_box .live_github a:first-child i{
-   transform:  rotate(135deg);
+.Portfolio_box .live_github a:first-child i {
+   transform: rotate(135deg);
 }
 
-.Portfolio_box .live_github a span{
+.Portfolio_box .live_github a span {
    position: absolute;
    top: -60%;
    left: 50%;
@@ -694,20 +710,20 @@ a {
    border-radius: .6rem;
    pointer-events: none;
    background: var(--white-color);
-   color:var(--bg-color);
+   color: var(--bg-color);
    opacity: 0;
    scale: .9;
    transition: .2s;
 
 }
 
-.Portfolio_box .live_github a:hover span{
+.Portfolio_box .live_github a:hover span {
    top: -70%;
    opacity: 1;
    transform: translateX(-50%) scale(1);
 }
 
-.Portfolio_box .portfolio_carousel{
+.Portfolio_box .portfolio_carousel {
    position: relative;
    width: 90%;
    top: 2rem;
@@ -715,64 +731,67 @@ a {
    margin-top: 4rem;
    border-radius: 2rem;
    overflow: hidden;
-   
+
 }
+
 .portfolio_carousel {
-  width: 100%;
+   width: 100%;
 }
-.portfolio_carousel .img-slide{
+
+.portfolio_carousel .img-slide {
    display: grid;
    grid-auto-flow: column;
-   grid-auto-columns: 100% ;
+   grid-auto-columns: 100%;
    gap: 2rem;
    height: inherit;
    transition: .5s;
    max-width: 1000px;
    padding-top: 7rem;
 }
-.portfolio_carousel .img-item{
+
+.portfolio_carousel .img-item {
    height: inherit;
 
 }
 
-.portfolio_carousel .img-item img{
+.portfolio_carousel .img-item img {
    display: block;
    width: 100%;
    height: 100%;
    object-fit: cover;
    border-radius: 1rem;
-   
+
 }
 
 .Portfolio_box .navigation {
    display: flex;
    flex-direction: row;
    gap: 2rem;
-   
- 
+
+
    margin-top: 6rem;
    padding-left: 12rem;
-  
+
 }
 
 .Portfolio_box .navigation button {
-  padding: 1rem 1.5rem;
-  background: var(--second-bg-color);
-  color: var(--main-color);
-  font-size: 2rem;
-  border: 2px solid var(--main-color);
-  border-radius: 0.5rem;
-  cursor: pointer;
+   padding: 1rem 1.5rem;
+   background: var(--second-bg-color);
+   color: var(--main-color);
+   font-size: 2rem;
+   border: 2px solid var(--main-color);
+   border-radius: 0.5rem;
+   cursor: pointer;
 }
 
-.Portfolio_box .navigation button.disabled{
+.Portfolio_box .navigation button.disabled {
    border-color: var(--second-bg-color);
    color: var(--disabled-color);
 }
 
-.Portfolio_box .navigation .arrow-right{
+.Portfolio_box .navigation .arrow-right {
    margin-left: 2rem;
-   
+
 }
 
 .contact-container {
@@ -786,32 +805,33 @@ a {
 
 
 }
-.contact-container .contact-box:first-child{
+
+.contact-container .contact-box:first-child {
    align-self: center;
 }
 
-.contact-box h2{
+.contact-box h2 {
    font-size: 4.5rem;
    color: var(--white-color);
 }
 
-.contact-box p{
+.contact-box p {
    font-size: 1.6rem;
    color: var(--white-color);
 }
 
-.contact-box .desc{
+.contact-box .desc {
    margin: 1.5rem 0 2.5rem;
 }
 
-.contact-box .contact-details{
+.contact-box .contact-details {
    display: flex;
    align-items: center;
    margin: 2rem 0;
 }
 
-.contact-details i{
-   display: inline-flex ;
+.contact-details i {
+   display: inline-flex;
    background: var(--second-bg-color);
    color: var(--main-color);
    font-size: 3rem;
@@ -820,11 +840,11 @@ a {
    margin-right: 1.5rem;
 }
 
-.contact-details .details p:first-child{
+.contact-details .details p:first-child {
    color: var(--main-color);
 }
 
-.contact-box form{
+.contact-box form {
 
    background: var(--second-bg-color);
    padding: 2.5rem 3.5rem 3.5rem;
@@ -833,18 +853,18 @@ a {
 }
 
 
-.contact-box .heading{
+.contact-box .heading {
    font-size: 3.5rem;
 }
 
-.contact-box  .field-box{
+.contact-box .field-box {
    display: grid;
-   grid-template-columns: repeat(2,1fr);
+   grid-template-columns: repeat(2, 1fr);
    gap: 2rem;
 }
 
 .contact-box .field-box input,
-.contact-box .field-box textarea{
+.contact-box .field-box textarea {
    padding: 1.5rem;
    background: var(--bg-color);
    border: .15rem solid var(--bg-color);
@@ -853,8 +873,8 @@ a {
    color: var(--white-color);
 }
 
-.contact-box .field-box textarea{
-   grid-column:  1 / -1;
+.contact-box .field-box textarea {
+   grid-column: 1 / -1;
    height: 26rem;
    resize: none;
 
@@ -873,19 +893,25 @@ a {
 
 
 .contact-social {
-  margin-top: 20px; /* Adds some space above the icons */
+   margin-top: 20px;
+   /* Adds some space above the icons */
 }
 
 .contact-social a {
-  font-size: 24px;   /* Sets the icon size */
-  color: #333;      /* Sets the icon color */
-  margin-right: 15px; /* Adds space between the icons */
-  text-decoration: none;
-  transition: color 0.3s; /* Smooth color change on hover */
+   font-size: 24px;
+   /* Sets the icon size */
+   color: #333;
+   /* Sets the icon color */
+   margin-right: 15px;
+   /* Adds space between the icons */
+   text-decoration: none;
+   transition: color 0.3s;
+   /* Smooth color change on hover */
 }
 
 .contact-social a:hover {
-  color: #007bff; /* Change color when you hover over an icon */
+   color: #007bff;
+   /* Change color when you hover over an icon */
 }
 
 
@@ -897,108 +923,138 @@ a {
 
 
 @media (max-width: 1200px) {
-    html {
-        font-size: 55%;
-    }
-    .Home {
-        padding: 8rem 5% 0;
-        gap: 8rem;
-    }
-    .Services_container, .resume_container, .contact-container {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-    .resume_container {
-        gap: 8rem;
-    }
+   html {
+      font-size: 55%;
+   }
+
+   .Home {
+      padding: 8rem 5% 0;
+      gap: 8rem;
+   }
+
+   .Services_container,
+   .resume_container,
+   .contact-container {
+      padding-left: 5%;
+      padding-right: 5%;
+   }
+
+   .resume_container {
+      gap: 8rem;
+   }
 }
 
 /* For Standard Tablets */
 @media (max-width: 992px) {
-    .navbar {
-        padding: 2rem 5%;
-    }
-    .navbar .menu-icon { /* Add a class for your hamburger icon */
-        display: block; /* Show hamburger icon */
-        font-size: 3.5rem;
-        cursor: pointer;
-    }
-    .navbar ul {
-        display: none; /* Hide the nav links */
-        /* You'd use JS to toggle a class that makes this flex column */
-    }
-    .Home {
-        flex-direction: column-reverse; /* Stack image above info */
-        text-align: center;
-        height: auto;
-        padding: 12rem 5% 5rem;
-    }
-    .home-img .img-box {
-        width: 45vw;
-        height: 45vw;
-        margin-bottom: 3rem;
-    }
-    .home-info .btn-sci {
-        justify-content: center;
-    }
-    .resume_container, .Portfolio_container, .contact-container {
-        grid-template-columns: 1fr;
-    }
-    .Portfolio_detail.active {
-        padding: 5rem 5% 0;
-        text-align: center;
-    }
-    .Portfolio_box .navigation {
-        justify-content: center;
-        padding-left: 0;
-    }
-    .contact-container {
-        gap: 8rem;
-    }
-    .contact-box:first-child {
-        text-align: center;
-    }
-    .contact-details {
-        justify-content: center;
-    }
+   .navbar {
+      padding: 2rem 5%;
+   }
+
+   .navbar .menu-icon {
+      /* Add a class for your hamburger icon */
+      display: block;
+      /* Show hamburger icon */
+      font-size: 3.5rem;
+      cursor: pointer;
+   }
+
+   .navbar ul {
+      display: none;
+      /* Hide the nav links */
+      /* You'd use JS to toggle a class that makes this flex column */
+   }
+
+   .Home {
+      flex-direction: column-reverse;
+      /* Stack image above info */
+      text-align: center;
+      height: auto;
+      padding: 12rem 5% 5rem;
+   }
+
+   .home-img .img-box {
+      width: 45vw;
+      height: 45vw;
+      margin-bottom: 3rem;
+   }
+
+   .home-info .btn-sci {
+      justify-content: center;
+   }
+
+   .resume_container,
+   .Portfolio_container,
+   .contact-container {
+      grid-template-columns: 1fr;
+   }
+
+   .Portfolio_detail.active {
+      padding: 5rem 5% 0;
+      text-align: center;
+   }
+
+   .Portfolio_box .navigation {
+      justify-content: center;
+      padding-left: 0;
+   }
+
+   .contact-container {
+      gap: 8rem;
+   }
+
+   .contact-box:first-child {
+      text-align: center;
+   }
+
+   .contact-details {
+      justify-content: center;
+   }
 }
 
 /* For Large Phones and Small Tablets */
 @media (max-width: 768px) {
-    .heading {
-        font-size: 4.5rem;
-    }
-    .home-info h1 {
-        font-size: 5rem;
-    }
-    .home-info h2 {
-        font-size: 2.8rem;
-    }
-    .home-img .img-box {
-        width: 55vw;
-        height: 55vw;
-    }
-    .Services_container {
-        grid-template-columns: 1fr;
-    }
-    .contact-box .field-box {
-        grid-template-columns: 1fr;
-    }
+   .heading {
+      font-size: 4.5rem;
+   }
+
+   .home-info h1 {
+      font-size: 5rem;
+   }
+
+   .home-info h2 {
+      font-size: 2.8rem;
+   }
+
+   .home-img .img-box {
+      width: 55vw;
+      height: 55vw;
+   }
+
+   .Services_container {
+      grid-template-columns: 1fr;
+   }
+
+   .contact-box .field-box {
+      grid-template-columns: 1fr;
+   }
 }
 
 /* For Standard Mobile Phones */
 @media (max-width: 576px) {
-    html {
-        font-size: 50%;
-    }
-    .home-img .img-box {
-        width: 65vw;
-        height: 65vw;
-    }
-    .Portfolio_box .portfolio_carousel {
-        width: 100%;
-    }
-    .Portfolio_box .live_github a {
-        font-size: 2.5rem;
-    }
+   html {
+      font-size: 50%;
+   }
+
+   .home-img .img-box {
+      width: 65vw;
+      height: 65vw;
+   }
+
+   .Portfolio_box .portfolio_carousel {
+      width: 100%;
+   }
+
+   .Portfolio_box .live_github a {
+      font-size: 2.5rem;
+   }
 }
