@@ -1,6 +1,6 @@
 const navLinks = document.querySelectorAll('header nav a');
 const logoLinks = document.querySelectorAll('.logo');
-const sections = document.querySelectorAll('.page-section');
+const sections = document.querySelectorAll('.section');
 const baranimation = document.querySelector('.bar-animation');
 const header = document.querySelector('header');
 
@@ -14,6 +14,7 @@ const activePage = (index) => {
   // Re-add bar animation
   setTimeout(() => {
     header.classList.add('active');
+    
     baranimation.classList.add('active');
   }, 100); // you can keep 1100 if needed, but 100ms looks more fluid
 
