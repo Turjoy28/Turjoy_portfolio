@@ -14,7 +14,7 @@ const activePage = (index) => {
   // Re-add bar animation
   setTimeout(() => {
     header.classList.add('active');
-    
+
     baranimation.classList.add('active');
   }, 100); // you can keep 1100 if needed, but 100ms looks more fluid
 
@@ -76,7 +76,7 @@ const activePortfolio = () => {
   const imgSlide = document.querySelector('.img-slide');
   const porfolioDetails = document.querySelectorAll('.Portfolio_detail');
   imgSlide.style.transform = `translateX(calc(${index * -100}% - ${index * 2}rem))`;
-  porfolioDetails.forEach(detail =>{
+  porfolioDetails.forEach(detail => {
     detail.classList.remove('active');
   });
   porfolioDetails[index].classList.add('active');
@@ -104,4 +104,46 @@ arrowLeft.addEventListener('click', () => {
     arrowLeft.classList.add('disabled');
   }
   activePortfolio();
+});
+
+
+// Make sure you included EmailJS SDK in your HTML:
+// <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+emailjs.init("GvSwLTdaQpXqPGEPr"); // Your public key
+
+const contactForm = document.getElementById("contactForm");
+const statusDiv = document.getElementById("status");
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Collect form data
+  const formData = {
+    title: contactForm.subject.value, // maps to template {{title}}
+    name: contactForm.name.value,
+    email: contactForm.email.value,
+    phone: contactForm.phone.value,
+    message: contactForm.message.value,
+    time: new Date().toLocaleString()
+  };
+
+  console.log("Sending form data:", formData); // optional debug
+
+  statusDiv.textContent = "Sending message...";
+  statusDiv.style.color = "black";
+
+  // Send email via EmailJS
+  emailjs.send("service_j121q69", "template_k4sfxrt", formData)
+    .then((response) => {
+      console.log("Email sent successfully:", response);
+      statusDiv.textContent = "Message sent successfully!";
+      statusDiv.style.color = "green";
+      contactForm.reset();
+    })
+    .catch((error) => {
+      console.error("EmailJS error:", error);
+      statusDiv.textContent = "Failed to send message. Please try again.";
+      statusDiv.style.color = "red";
+    });
 });
