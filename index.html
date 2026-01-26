@@ -16,11 +16,11 @@
       <a href="#" class="logo">Portfolio</a>
       <i class="fa-solid fa-sliders" id="menu-icon"></i>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#Resume">Resume</a></li>
-        <li><a href="#Portfolio">Portfolio</a></li>
-        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
     </nav>
@@ -36,12 +36,12 @@
 
   </div>
 
-  <section class="Home active">
+  <section class="Home active" id="home">
     <div class="home-info">
       <h1>Turjoy</h1>
       <h2>I am a
-        <span style="--i:4;" data-text="Frontend Developer">Frontend Developer</span>
-        <span style="--i:3;" data-text="Designer">Designer</span>
+        <span style="--i:4;" data-text="FullStack Developer">FullStack Developer</span>
+        <span style="--i:3;" data-text="Software Design">Software Design</span>
         <span style="--i:2;" data-text="programmer">programmer</span>
         <span style="--i:1;" data-text="Youtuber">Youtuber</span>
 
@@ -54,7 +54,7 @@
         deliver high-quality products that drive business growth.</p>
 
       <div class="btn-sci">
-        <a href="public/cv/Turjoy_Resume.pdf" class="btn">Download Cv</a>
+        <a href="public/cv/Dev_Turjoy.pdf" class="btn" download>Download Cv</a>
         <div class="sci">
           <a href="https://www.facebook.com/saifsarowar.dlxturjoy/"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://www.linkedin.com/in/saif-saruwar-turjoy-441741235/"><i class="fa-brands fa-linkedin"></i></a>
@@ -157,13 +157,13 @@
 
   <!-- resume section -->
 
-  <section class="Resume" id="Resume">
+  <section class="Resume" id="resume">
     <div class="resume_container">
       <div class="resume_box">
         <h2>Why Hire Me?</h2>
-        <p class="desc">“I am a full-stack developer who loves solving complex problems with clean, efficient code. From
+        <p class="desc">"I am a full-stack developer who loves solving complex problems with clean, efficient code. From
           building interactive web apps to optimizing backend processes, I focus on creating real impact. With my CSE
-          background and dedication, I bring energy, creativity, and results-driven mindset to any project or team.”</p>
+          background and dedication, I bring energy, creativity, and results-driven mindset to any project or team."</p>
         <button class="resume-btn active">Experience</button>
         <button class="resume-btn">Education</button>
         <button class="resume-btn">Skills</button>
@@ -222,7 +222,7 @@
 
         <div class="resume_detail Education">
           <h2 class="heading">My <span> Education</span></h2>
-          <p class="desc">“Knowledge empowers, skills transform, and education unlocks endless possibilities.”</p>
+          <p class="desc">"Knowledge empowers, skills transform, and education unlocks endless possibilities."</p>
           <div class="resume_list">
             <div class="resume_item">
               <p class="year">2021 - 2025</p>
@@ -257,8 +257,7 @@
 
         <div class="resume_detail skill">
           <h2 class="heading">My <span> Skills</span></h2>
-          <p class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, pariatur magnam dicta
-            optio blanditiis explicabo.</p>
+          <p class="desc">Throughout my journey, I've mastered full-stack web development with MERN stack, building scalable applications with clean, maintainable code. I've also developed expertise in database management, deep learning, and NLP, enabling me to create intelligent systems that solve real-world problems effectively.</p>
           <div class="resume_list">
             <div class="resume_item">
               <i class="fa-brands fa-html5"></i>
@@ -351,328 +350,334 @@
       </div>
     </div>
   </section>
-  <section class="Portfolio" id="Portfolio">
-    <h2 class="heading">Latest <span>Project</span></h2>
-    <div class="Portfolio_container">
-      <div class="Portfolio_box">
-        <div class="Portfolio_detail active">
-          <p class="numb">01</p>
 
-          <h3>Blogify (MERN Stack)</h3>
-          <p>A full-featured blogging platform with secure authentication and authorization. Implemented token-based
-            login, encrypted passwords, and role-based access so only authenticated users can create, update, or delete
-            posts. Includes complete CRUD operations with a clean, user-friendly interface</p>
-          <div class="tech">
-            <p>JavaScript, Nodejs, ejs, MongoDB</p>
+  <!-- Portfolio Section - Redesigned -->
+  <section class="Portfolio" id="portfolio">
+    <h2 class="heading">Latest <span>Projects</span></h2>
+    <p class="portfolio-subtitle">Showcasing my recent work and technical expertise</p>
+
+    <div class="portfolio-wrapper">
+      <button class="portfolio-nav arrow-left disabled"><i class="fa-solid fa-chevron-left"></i></button>
+
+      <div class="portfolio-slider">
+        <!-- Project 1: E-ShopCart -->
+        <div class="project-card active">
+          <div class="project-image">
+            <button class="img-nav img-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="img-gallery">
+              <img src="ecommerce_home.png" alt="E-ShopCart Categories" class="active">
+              <img src="ecommerce_signup.png" alt="E-ShopCart Authentication">
+              <img src="ecommerce_dashboard.png" alt="E-ShopCart Admin Dashboard">
+              <img src="ecommerce_payment.png" alt="E-ShopCart Payment Gateway">
+            </div>
+            <button class="img-nav img-next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="image-overlay">
+              <span class="project-number">01</span>
+            </div>
+            <div class="img-counter"><span class="current-img">1</span> / <span class="total-img">4</span></div>
           </div>
-
-          <div class="live_github">
-            <a href="#"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="https://github.com/Turjoy28/Blogify-App"><i class="fa-brands fa-github"></i><span>Github
-                Repository</span></a>
+          <div class="project-content">
+            <span class="project-category">Full Stack E-Commerce</span>
+            <h3>E-ShopCart - Production Ready</h3>
+            <p>A premium eCommerce platform powering real transactions with SSLCommerz gateway integration (bKash, Nagad, Card payments). Features Redis-optimized caching, JWT security with HTTP-only cookies, smart coupon validation, and complete order lifecycle management. Admin dashboard for product & payment analytics. Deployed on Render with Cloudinary CDN for lightning-fast media delivery.</p>
+            <div class="project-tech">
+              <span>React.js</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Redis</span>
+              <span>Tailwind CSS</span>
+              <span>SSLCommerz</span>
+            </div>
+            <div class="project-links">
+              <a href="https://lnkd.in/gSRhh5iy" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="https://lnkd.in/gpEU-D6v" class="project-btn github"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
           </div>
-
         </div>
 
-        <div class="Portfolio_detail">
-          <p class="numb">02</p>
-
-          <h3>Features (blogify)</h3>
-          <p>
-            🔐 Rock-solid authentication & authorization system for ultimate security <br>
-            🎫 JWT token-based login ensures safe & seamless sessions <br>
-            🔒 Passwords encrypted to protect sensitive data <br>
-            👥 Role-based access control — separate privileges for User & Admin <br>
-            📖 Public blog access — anyone can read without login <br>
-            ✍️ Authenticated users can effortlessly create posts <br>
-            🛠 Users can confidently edit & delete only their own posts <br>
-            🧑‍⚖️ Admins have full control — manage all posts with ease <br>
-            ⚠️ Strict safeguards prevent users from modifying others' content <br>
-            🔍 Advanced search, sort & filter — coming soon in future updates <br>
-            📱 Responsive, sleek & intuitive UI for an excellent user experience
-          </p>
-
-
-          <div class="tech">
-            <p>JavaScript, Nodejs, ejs, MongoDB ,Passport auth</p>
+        <!-- Project 2: Blogify -->
+        <div class="project-card">
+          <div class="project-image">
+            <button class="img-nav img-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="img-gallery">
+              <img src="Blogify.png" alt="Blogify Project" class="active">
+              <img src="halim_blog.png" alt="Blogify Features">
+              <img src="blog_Comments.png" alt="Blogify Comments">
+            </div>
+            <button class="img-nav img-next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="image-overlay">
+              <span class="project-number">02</span>
+            </div>
+            <div class="img-counter"><span class="current-img">1</span> / <span class="total-img">3</span></div>
           </div>
-
-          <div class="live_github">
-            <a href="#"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="https://github.com/Turjoy28/Blogify-App"><i class="fa-brands fa-github"></i><span>Github
-                Repository</span></a>
+          <div class="project-content">
+            <span class="project-category">Full Stack</span>
+            <h3>Blogify (MERN Stack)</h3>
+            <p>A full-featured blogging platform with secure authentication and authorization. Implemented token-based login, encrypted passwords, and role-based access so only authenticated users can create, update, or delete posts.</p>
+            <div class="project-tech">
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>EJS</span>
+              <span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="https://github.com/Turjoy28/Blogify-App" class="project-btn github"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
           </div>
-
-        </div>
-        <div class="Portfolio_detail">
-          <p class="numb">03</p>
-
-          <h3>Daily_notify</h3>
-          <p>Daily_Notify is a productivity-focused web application that allows users to record and track their
-            important daily tasks. It features a clean and intuitive dashboard where users can create, update, and
-            delete tasks with ease. The application includes secure Google Authentication (OAuth), ensuring seamless
-            login without compromising user security. Built with a clean backend structure and responsive UI,
-            Daily_Notify helps users stay organized and manage their day-to-day activities efficiently.</p>
-          <div class="tech">
-            <p>JavaScript,nodejs,google_oauth20 & mongoDB</p>
-          </div>
-
-          <div class="live_github">
-            <a href="#"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="https://github.com/Turjoy28/Notify_Daily"><i class="fa-brands fa-github"></i><span>Github
-                Repository</span></a>
-          </div>
-
         </div>
 
-        <div class="Portfolio_detail">
-          <p class="numb">04</p>
-          <h3>Features(Daily_notify)</h3>
-          <p>
-            📌 Tracks & stores day-to-day important tasks <br>
-            ✅ Full CRUD operations — Add, Edit, Update, Delete notes <br>
-            🔐 Google Authentication (OAuth) for secure sign-in <br>
-            📊 Clean dashboard UI for task management <br>
-            🗂 Minimal & organized backend architecture <br>
-            🔎 Search bar implemented — queries the database and finds notes <br>
-            🚧 Future enhancement — efficient sorting & filtering (Today’s notes / Last month / Important vs less
-            important) <br>
-            📱 Responsive & user-friendly interface
-          </p>
-
-          <div class="tech">
-            <p>nodjs,JavaScript&mongoDB</p>
+        <!-- Project 3: Daily Notify -->
+        <div class="project-card">
+          <div class="project-image">
+            <button class="img-nav img-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="img-gallery">
+              <img src="Note_hompage.png" alt="Daily Notify Home" class="active">
+              <img src="Note_Dashboard.png" alt="Daily Notify Dashboard">
+              <img src="notify_Daily.png" alt="Daily Notify Features">
+            </div>
+            <button class="img-nav img-next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="image-overlay">
+              <span class="project-number">03</span>
+            </div>
+            <div class="img-counter"><span class="current-img">1</span> / <span class="total-img">3</span></div>
           </div>
-
-          <div class="live_github">
-            <a href="#"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="https://github.com/Turjoy28/Notify_Daily"><i class="fa-brands fa-github"></i><span>Github
-                Repository</span></a>
+          <div class="project-content">
+            <span class="project-category">Productivity App</span>
+            <h3>Daily_Notify</h3>
+            <p>A productivity-focused web application for recording and tracking daily tasks. Features a clean dashboard with Google Authentication (OAuth), ensuring seamless and secure login experience.</p>
+            <div class="project-tech">
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>OAuth 2.0</span>
+              <span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="https://github.com/Turjoy28/Notify_Daily" class="project-btn github"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
           </div>
-
-        </div>
-        <div class="Portfolio_detail">
-          <p class="numb">05</p>
-
-          <h3>URL Shortener (Backend Project)</h3>
-          <p>A backend-focused project built with Node.js that converts long URLs into short, shareable links using
-            UUID. Designed for efficiency, scalability, and quick redirection while demonstrating strong backend
-            development skills.</p>
-
-          <div class="tech">
-            <p>Postman,nodejs,JavaScript,uuid package</p>
-          </div>
-
-          <div class="live_github">
-            <a href="#"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="https://github.com/Turjoy28/URL_Shortner"><i class="fa-brands fa-github"></i><span>Github
-                Repository</span></a>
-          </div>
-
         </div>
 
-        <div class="Portfolio_detail">
-          <p class="numb">05</p>
-
-          <h3>REST API & JavaScript Projects</h3>
-          <p>Developed a fully backend-focused REST API with CRUD operations, tested using Postman, including a Weather
-            App integrating external APIs. Also built frontend JavaScript projects such as a Stopwatch, an EJS-based app
-            for adding programming languages, and a file upload feature, showcasing both backend and frontend
-            development skills.</p>
-          <div class="tech">
-            <p>nodejs,javascript& mongoDB</p>
+        <!-- Project 4: URL Shortener -->
+        <div class="project-card">
+          <div class="project-image">
+            <button class="img-nav img-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="img-gallery">
+              <img src="url_Shortner.png" alt="URL Shortener Project" class="active">
+            </div>
+            <button class="img-nav img-next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="image-overlay">
+              <span class="project-number">04</span>
+            </div>
+            <div class="img-counter"><span class="current-img">1</span> / <span class="total-img">1</span></div>
           </div>
-
-          <div class="live_github">
-            <a href="#"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="https://github.com/Turjoy28/Rest_Api-CRUD-"><i class="fa-brands fa-github"></i><span>Github
-                Repository</span></a>
+          <div class="project-content">
+            <span class="project-category">Backend</span>
+            <h3>URL Shortener</h3>
+            <p>A backend-focused project built with Node.js that converts long URLs into short, shareable links using UUID. Designed for efficiency, scalability, and quick redirection.</p>
+            <div class="project-tech">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>UUID</span>
+              <span>Postman</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="https://github.com/Turjoy28/URL_Shortner" class="project-btn github"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
           </div>
-
         </div>
 
-        <div class="Portfolio_detail">
-          <p class="numb">05</p>
-
-          <h3>Billing Management System (Java & MS SQL)</h3>
-          <p>A buyer and admin-focused application where the admin can manage products, generate and print bills. Built
-            with Java for backend logic and MS SQL for data management, demonstrating full-stack problem-solving and
-            database integration skills.</p>
-          <div class="tech">
-            <p>Java,mssql,netbeans,Threads</p>
+        <!-- Project 5: REST API -->
+        <div class="project-card">
+          <div class="project-image">
+            <button class="img-nav img-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="img-gallery">
+              <img src="rest_api.png" alt="REST API Project" class="active">
+            </div>
+            <button class="img-nav img-next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="image-overlay">
+              <span class="project-number">05</span>
+            </div>
+            <div class="img-counter"><span class="current-img">1</span> / <span class="total-img">1</span></div>
           </div>
-
-          <div class="live_github">
-            <a href="#"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="#"><i class="fa-brands fa-github"></i><span>Github Repository</span></a>
+          <div class="project-content">
+            <span class="project-category">API Development</span>
+            <h3>REST API & JS Projects</h3>
+            <p>A fully backend-focused REST API with CRUD operations, including a Weather App integrating external APIs. Also built frontend projects like Stopwatch and file upload features.</p>
+            <div class="project-tech">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+              <span>REST API</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="https://github.com/Turjoy28/Rest_Api-CRUD-" class="project-btn github"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
           </div>
-
         </div>
 
-        <div class="Portfolio_detail">
-          <p class="numb">05</p>
-
-          <h3>Features_(Billing Management System)</h3>
-          <p>
-            🧾 Billing Management System (Admin Focused) <br>
-            🔐 Secure Admin Login / Logout system <br>
-            🛡 Only admin has full system access <br>
-            👤 Buyer management — Add, View, Update, Delete buyers <br>
-            🛒 Product & inventory management <br>
-            📦 Stock tracking for available products <br>
-            🧮 Automated bill generation <br>
-            🧾 Cash memo receipt generation with print option <br>
-            ✏ Update buyer & product details anytime <br>
-            🗑 Delete buyer records when required <br>
-            📊 Structured dashboard for billing operations
-          </p>
-
-          <div class="tech">
-            <p>Java,mssql,netbeans,Threads</p>
+        <!-- Project 6: Billing Management System -->
+        <div class="project-card">
+          <div class="project-image">
+            <button class="img-nav img-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="img-gallery">
+              <img src="billing_img1.png" alt="Billing System 1" class="active">
+              <img src="billing_img2.png" alt="Billing System 2">
+              <img src="billing_img3.png" alt="Billing System 3">
+              <img src="billing_img4.png" alt="Billing System 4">
+              <img src="billing_img5.png" alt="Billing System 5">
+              <img src="billing_img6.png" alt="Billing System 6">
+              <img src="billing_img7.png" alt="Billing System 7">
+              <img src="billing_img8.png" alt="Billing System 8">
+              <img src="billing_img9.png" alt="Billing System 9">
+            </div>
+            <button class="img-nav img-next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="image-overlay">
+              <span class="project-number">06</span>
+            </div>
+            <div class="img-counter"><span class="current-img">1</span> / <span class="total-img">9</span></div>
           </div>
-
-          <div class="live_github">
-            <a href="#"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="#"><i class="fa-brands fa-github"></i><span>Github Repository</span></a>
+          <div class="project-content">
+            <span class="project-category">Desktop Application</span>
+            <h3>Billing Management System</h3>
+            <p>An admin-focused application for managing products, generating and printing bills. Built with Java for backend logic and MS SQL for data management.</p>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>MS SQL</span>
+              <span>NetBeans</span>
+              <span>Threads</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="#" class="project-btn github"><i class="fa-brands fa-github"></i> Source Code</a>
+            </div>
           </div>
-
         </div>
-
-
       </div>
 
-      <div class="Portfolio_box">
-
-        <div class="portfolio_carousel">
-          <div class="img-slide">
-            <div class="img-item">
-              <img src="Blogify.png">
-
-            </div>
-
-
-            <div class="img-item">
-              <img src="halim_blog.png">
-
-            </div>
-
-            <div class="img-item">
-              <img src="Note_hompage.png">
-
-            </div>
-
-            <div class="img-item">
-              <img src="Note_Dashboard.png">
-
-            </div>
-            <div class="img-item">
-              <img src="url_Shortner.png">
-
-            </div>
-            <div class="img-item">
-              <img src="rest_api.png">
-
-            </div>
-            <div class="img-item">
-              <img src="billing_img1.png">
-
-            </div>
-            <div class="img-item">
-              <img src="billing_img8.png">
-
-            </div>
-
-          </div>
-        </div>
-
-        <div class="navigation">
-
-          <button class="arrow-left disabled"><i class="fa-solid fa-chevron-left"></i></button>
-          <button class="arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
-
-        </div>
-
-
-      </div>
-
-
-
-
-
-
+      <button class="portfolio-nav arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 
-    <!-- ^container div -->
-
+    <!-- Project Indicators -->
+    <div class="project-indicators">
+      <span class="indicator active" data-index="0"></span>
+      <span class="indicator" data-index="1"></span>
+      <span class="indicator" data-index="2"></span>
+      <span class="indicator" data-index="3"></span>
+      <span class="indicator" data-index="4"></span>
+      <span class="indicator" data-index="5"></span>
+    </div>
   </section>
 
 
-  <section class="Contact" id="Contact">
+  <section class="Contact" id="contact">
+    <h2 class="heading">Get In <span>Touch</span></h2>
+    <p class="contact-subtitle">Let's collaborate and create something amazing together</p>
+    
     <div class="contact-container">
+      <!-- Left Side: Contact Info & Social Media -->
+      <div class="contact-info-wrapper">
+        <div class="contact-box contact-left">
+          <h3>Quick Contact</h3>
+          <p class="desc">"I'm ready to bring my skills and energy to make a meaningful impact. Reach out, and I'll respond promptly!"</p>
+          
+          <!-- Contact Details in Compact Style -->
+          <div class="contact-details-compact">
+            <div class="contact-detail-item">
+              <div class="icon-box">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="detail-content">
+                <span class="detail-label">Phone</span>
+                <a href="tel:+8801870801955">(+88) 01870801955</a>
+              </div>
+            </div>
 
-      <div class="contact-box">
+            <div class="contact-detail-item">
+              <div class="icon-box">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="detail-content">
+                <span class="detail-label">Email</span>
+                <a href="mailto:saifbus28@gmail.com">saifbus28@gmail.com</a>
+              </div>
+            </div>
 
-        <h2>Let's Work Together</h2>
-        <p class="desc">“I’m ready to bring my skills and energy to make a meaningful impact in your company. Reach out through this mailbox, and I’ll respond promptly.”
-        </p>
-        <div class="contact-details">
-
-          <i class="fa-solid fa-phone-volume"></i>
-          <div class="details">
-            <p>Phone</p>
-            <p>(+88 ) 01870801955</p>
-
+            <div class="contact-detail-item">
+              <div class="icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="detail-content">
+                <span class="detail-label">Location</span>
+                <p>Mohanagar Project, Rampura, Dhaka</p>
+              </div>
+            </div>
           </div>
 
-        </div>
-
-        <div class="contact-details">
-
-          <i class="fa-solid fa-envelope-open"></i>
-          <div class="details">
-            <p>Email</p>
-            <p>saifbus28@gmail.com</p>
-
+          <!-- Social Media Links - Compact Professional Style -->
+          <div class="social-links">
+            <h4>Connect With Me</h4>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/saifsarowar.dlxturjoy/" class="social-link" title="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/saif-saruwar-turjoy-441741235/" class="social-link" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/Turjoy28" class="social-link" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UC3W_VtB_rMLpmtlSiINE3WQ" class="social-link" title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
           </div>
-
         </div>
-
-        <div class="contact-details">
-
-          <i class="fa-solid fa-location-dot"></i>
-          <div class="details">
-            <p>Address</p>
-            <p>Mohanagar Project, Rampura</p>
-
-          </div>
-
-        </div>
-
-        <!-- === SOCIAL ICONS ADDED HERE === -->
-        <div class="contact-social">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <!-- === END OF SOCIAL ICONS === -->
-
       </div>
 
-     <div class="contact-box">
-    <form id="contactForm">
-      <h2>Contact <span>Me!</span></h2>
-      <div class="field-box">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="text" name="phone" placeholder="Phone Number" required>
-        <input type="text" name="subject" placeholder="Email Subject" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-      </div>
-      <button type="submit" class="btn">Send Message</button>
-      <div class="status" id="status"></div>
-    </form>
-  </div>
+      <!-- Right Side: Contact Form -->
+      <div class="contact-box contact-form-wrapper">
+        <form id="contactForm">
+          <h3>Send Me a Message</h3>
+          <p class="form-subtitle">Fill in the details below and I'll get back to you soon.</p>
+          
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+            <span class="form-error" id="nameError"></span>
+          </div>
 
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            <span class="form-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+88..." required>
+            <span class="form-error" id="phoneError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Email subject" required>
+            <span class="form-error" id="subjectError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message here..." rows="5" required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn">Send Message</button>
+          <div class="status" id="status"></div>
+        </form>
+      </div>
     </div>
   </section>
 
