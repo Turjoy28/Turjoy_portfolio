@@ -1,8 +1,49 @@
-const navLinks = document.querySelectorAll('header nav ul a');
+// Select only navigation links (not the header)
+const navLinks = document.querySelectorAll('header nav ul li:not(.mobile-menu-header) a');
 const logoLinks = document.querySelectorAll('.logo');
 const sections = document.querySelectorAll('.section');
 const baranimation = document.querySelector('.bar-animation');
 const header = document.querySelector('header');
+
+// Mobile Menu Toggle
+const menuIcon = document.getElementById('menu-icon');
+const navMenu = document.getElementById('nav-menu');
+const menuOverlay = document.getElementById('menu-overlay');
+const closeMenuBtn = document.getElementById('close-menu');
+
+const openMobileMenu = () => {
+  menuIcon.classList.add('active');
+  navMenu.classList.add('active');
+  menuOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  menuIcon.classList.remove('fa-bars');
+  menuIcon.classList.add('fa-times');
+};
+
+const closeMobileMenu = () => {
+  menuIcon.classList.remove('active');
+  navMenu.classList.remove('active');
+  menuOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+  menuIcon.classList.remove('fa-times');
+  menuIcon.classList.add('fa-bars');
+};
+
+// Event listeners for menu
+menuIcon.addEventListener('click', () => {
+  if (navMenu.classList.contains('active')) {
+    closeMobileMenu();
+  } else {
+    openMobileMenu();
+  }
+});
+
+menuOverlay.addEventListener('click', closeMobileMenu);
+
+// Close button inside menu
+if (closeMenuBtn) {
+  closeMenuBtn.addEventListener('click', closeMobileMenu);
+}
 
 // Get all main sections for scroll detection
 const allSections = [
@@ -21,8 +62,7 @@ window.addEventListener('load', () => {
   }
 });
 
-// Intersection Observer for Dynamic Navbar Detection - divided into 5 sections
-// Each section = 20% of viewport height
+// Intersection Observer for Dynamic Navbar Detection
 const observerOptions = {
   root: null,
   rootMargin: '0px 0px -85% 0px',
@@ -32,12 +72,9 @@ const observerOptions = {
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Find the index of the current section
       const sectionIndex = allSections.indexOf(entry.target);
       if (sectionIndex !== -1) {
-        // Remove active class from all nav links
         navLinks.forEach(link => link.classList.remove('active'));
-        // Add active class to the corresponding nav link
         if (navLinks[sectionIndex]) {
           navLinks[sectionIndex].classList.add('active');
         }
@@ -55,29 +92,64 @@ allSections.forEach(section => {
 
 // Smooth scroll behavior for nav links
 navLinks.forEach((link, idx) => {
-  link.addEventListener('click', (e) => {
+  link.addEventListener('click', function(e) {
     e.preventDefault();
+    e.stopPropagation();
+
     const targetSection = allSections[idx];
+
     if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-      // Update active nav link
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
+      // Close mobile menu first if open
+      if (navMenu.classList.contains('active')) {
+        closeMobileMenu();
+
+        // Wait for menu to close, then scroll
+        setTimeout(() => {
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Update active state
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }, 400);
+      } else {
+        // Desktop - scroll immediately
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
     }
   });
 });
 
 // Handle logo click (redirect to Home)
 logoLinks.forEach(logo => {
-  logo.addEventListener('click', (e) => {
+  logo.addEventListener('click', function(e) {
     e.preventDefault();
+    e.stopPropagation();
+
     const homeSection = allSections[0];
+
     if (homeSection) {
-      homeSection.scrollIntoView({ behavior: 'smooth' });
-      navLinks.forEach(l => l.classList.remove('active'));
-      navLinks[0].classList.add('active');
+      if (navMenu.classList.contains('active')) {
+        closeMobileMenu();
+        setTimeout(() => {
+          homeSection.scrollIntoView({ behavior: 'smooth' });
+          navLinks.forEach(l => l.classList.remove('active'));
+          if (navLinks[0]) navLinks[0].classList.add('active');
+        }, 400);
+      } else {
+        homeSection.scrollIntoView({ behavior: 'smooth' });
+        navLinks.forEach(l => l.classList.remove('active'));
+        if (navLinks[0]) navLinks[0].classList.add('active');
+      }
     }
   });
+});
+
+// Close mobile menu on window resize (if open and resizing to desktop)
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 992 && navMenu.classList.contains('active')) {
+    closeMobileMenu();
+  }
 });
 
 

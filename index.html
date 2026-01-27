@@ -14,17 +14,21 @@
   <header class="active">
     <nav class="navbar">
       <a href="#" class="logo">Portfolio</a>
-      <i class="fa-solid fa-sliders" id="menu-icon"></i>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <ul id="nav-menu">
+        <li class="mobile-menu-header">
+          <span class="menu-title">Menu</span>
+          <i class="fa-solid fa-xmark" id="close-menu"></i>
+        </li>
+        <li><a href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#services"><i class="fa-solid fa-gear"></i> Services</a></li>
+        <li><a href="#resume"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="fa-solid fa-folder-open"></i> Portfolio</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
       </ul>
-
     </nav>
   </header>
+  <div class="menu-overlay" id="menu-overlay"></div>
 
   <div class="bar-animation active">
     <div class="bar" style="--i:6;"></div>
@@ -40,12 +44,12 @@
     <div class="home-info">
       <h1>Turjoy</h1>
       <h2>I am a
-        <span style="--i:4;" data-text="FullStack Developer">FullStack Developer</span>
-        <span style="--i:3;" data-text="Software Design">Software Designer</span>
-        <span style="--i:2;" data-text="programmer">programmer</span>
-        <span style="--i:1;" data-text="Youtuber">Youtuber</span>
-
-
+        <span class="text-animate">
+          <span style="--i:4;" data-text="FullStack Developer">FullStack Developer</span>
+          <span style="--i:3;" data-text="Software Designer">Software Designer</span>
+          <span style="--i:2;" data-text="Programmer">Programmer</span>
+          <span style="--i:1;" data-text="Youtuber">Youtuber</span>
+        </span>
       </h2>
       <p>As a CSE graduate from Ahsanullah University of Science & Technology,
         I have developed strong proficiency in modern web technologies, especially the MERN
