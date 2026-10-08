@@ -1,0 +1,25 @@
+.bar-animation {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   z-index: -1;
+   overflow: hidden;
+}
+
+.bar-animation .bar {
+   flex: 1;
+   height: 100%;
+   background: #1f242d;
+   transform: translateY(-100%);
+   animation: show-bars 0.5s ease-in-out forwards;
+   animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes show-bars {
+   100% {
+      transform: translateY(0%);
+   }
+}

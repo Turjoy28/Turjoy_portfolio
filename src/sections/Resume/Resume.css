@@ -1,0 +1,382 @@
+.resume_container {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   gap: 6rem;
+   color: white;
+   padding: 15rem 10% 12rem;
+   align-items: start;
+}
+
+.resume_box h2 {
+   font-size: 3.6rem;
+   font-weight: 700;
+   line-height: 1.2;
+   margin-bottom: 0;
+}
+
+.resume_box p {
+   font-size: 1.5rem;
+   line-height: 1.7;
+}
+
+.resume_box .desc {
+   margin: 2rem 0 3rem;
+   color: rgba(255, 255, 255, 0.85);
+   border-left: 3px solid var(--main-color);
+   padding-left: 2rem;
+   font-style: italic;
+}
+
+/* ---------- Tabs ---------- */
+.resume_box .resume-btn {
+   width: 100%;
+   height: 5rem;
+   background: var(--second-bg-color);
+   border: 2px solid transparent;
+   font-size: 1.5rem;
+   color: var(--white-color);
+   font-weight: 500;
+   margin-bottom: 1.5rem;
+   border-radius: 1rem;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+}
+
+.resume_box .resume-btn:hover {
+   background: rgba(154, 205, 50, 0.1);
+   border-color: rgba(154, 205, 50, 0.3);
+}
+
+.resume_box .resume-btn.active {
+   border-color: var(--main-color);
+   color: var(--main-color);
+   background: rgba(154, 205, 50, 0.1);
+   font-weight: 600;
+}
+
+/* ---------- Tab panels ---------- */
+.resume_box .heading {
+   font-size: 3.6rem;
+   font-weight: 700;
+   text-align: left;
+   padding-top: 0;
+   margin-bottom: 0;
+   line-height: 1.2;
+}
+
+.resume_detail {
+   display: none;
+}
+
+.resume_detail.active {
+   display: block;
+}
+
+/* Base List & Scrollbar */
+.resume_list {
+   max-height: 60rem;
+   overflow-y: auto;
+   padding-right: 1.2rem;
+}
+
+.resume_list::-webkit-scrollbar {
+   width: .6rem;
+}
+
+.resume_list::-webkit-scrollbar-track {
+   background: rgba(255, 255, 255, 0.05);
+   border-radius: 1rem;
+}
+
+.resume_list::-webkit-scrollbar-thumb {
+   background: var(--main-color);
+   border-radius: 1rem;
+}
+
+.resume_list:hover::-webkit-scrollbar-thumb {
+   background: greenyellow;
+}
+
+/* ---------- Timeline List (Experience & Education) ---------- */
+.resume_list.timeline_list {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+.resume_item.timeline_item {
+   background: var(--second-bg-color);
+   border-radius: 1.2rem;
+   padding: 2.2rem 2.5rem;
+   border: 1px solid rgba(255, 255, 255, 0.08);
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   display: flex;
+   flex-direction: column;
+}
+
+.resume_item.timeline_item:hover {
+   border-color: var(--main-color);
+   transform: translateY(-3px);
+   box-shadow: 0 10px 30px rgba(154, 205, 50, 0.12);
+}
+
+.timeline_header {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   gap: 1.5rem;
+   margin-bottom: 1.2rem;
+   flex-wrap: wrap;
+}
+
+.timeline_title_group {
+   display: flex;
+   flex-direction: column;
+   gap: 0.4rem;
+}
+
+.timeline_title_group h3 {
+   font-size: 2.1rem;
+   font-weight: 700;
+   color: #ffffff;
+   line-height: 1.3;
+   margin: 0;
+}
+
+.timeline_title_group .company {
+   font-size: 1.45rem;
+   font-weight: 500;
+   color: var(--main-color);
+   margin: 0;
+}
+
+.timeline_header .year {
+   color: var(--main-color);
+   font-size: 1.3rem;
+   font-weight: 600;
+   background: rgba(154, 205, 50, 0.12);
+   border: 1px solid rgba(154, 205, 50, 0.3);
+   padding: 0.4rem 1.4rem;
+   border-radius: 2rem;
+   white-space: nowrap;
+   display: inline-block;
+}
+
+.timeline_desc {
+   font-size: 1.45rem;
+   line-height: 1.7;
+   color: rgba(255, 255, 255, 0.85);
+   margin-bottom: 1rem;
+}
+
+/* Bullet Points */
+.resume_points {
+   margin: 0.8rem 0;
+   padding-left: 2rem;
+   display: flex;
+   flex-direction: column;
+   gap: 0.8rem;
+}
+
+.resume_points li {
+   font-size: 1.45rem;
+   line-height: 1.65;
+   color: rgba(255, 255, 255, 0.88);
+}
+
+.resume_points li::marker {
+   color: var(--main-color);
+   font-size: 1.1em;
+}
+
+/* Project Links */
+.resume_links {
+   margin-top: 1.5rem;
+   display: flex;
+   gap: 1.2rem;
+   flex-wrap: wrap;
+}
+
+.resume_links a {
+   display: inline-flex;
+   align-items: center;
+   gap: 0.6rem;
+   font-size: 1.3rem;
+   color: var(--main-color);
+   font-weight: 600;
+   background: rgba(154, 205, 50, 0.1);
+   border: 1px solid rgba(154, 205, 50, 0.3);
+   padding: 0.5rem 1.4rem;
+   border-radius: 2rem;
+   text-decoration: none;
+   transition: all 0.25s ease;
+}
+
+.resume_links a:hover {
+   background: var(--main-color);
+   color: var(--bg-color);
+   border-color: var(--main-color);
+   box-shadow: 0 4px 15px rgba(154, 205, 50, 0.3);
+}
+
+/* ---------- Skills tab ---------- */
+.resume_detail.skill .resume_list {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+   max-height: none;
+   overflow: visible;
+   gap: 2rem;
+}
+
+.resume_detail.skill .resume_item {
+   position: relative;
+   background: var(--second-bg-color);
+   border-radius: 1.2rem;
+   border: 1px solid rgba(255, 255, 255, 0.08);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-height: 14rem;
+   padding: 2rem;
+   transition: all 0.3s ease;
+}
+
+.resume_detail.skill .resume_item:hover {
+   border-color: var(--main-color);
+   transform: translateY(-5px);
+   box-shadow: 0 10px 25px rgba(154, 205, 50, 0.15);
+}
+
+.resume_detail.skill .resume_item svg {
+   font-size: 5.5rem;
+   transition: .4s ease;
+   color: #ffffff;
+}
+
+.resume_detail.skill .resume_item:hover svg {
+   color: var(--main-color);
+   transform: scale(1.1);
+}
+
+.resume_detail.skill .resume_item span {
+   position: absolute;
+   top: -15%;
+   background: var(--main-color);
+   color: var(--bg-color);
+   font-size: 1.3rem;
+   font-weight: 600;
+   padding: .6rem 1.2rem;
+   border-radius: 2rem;
+   pointer-events: none;
+   opacity: 0;
+   transform: scale(.9);
+   transition: .3s;
+   white-space: nowrap;
+}
+
+.resume_detail.skill .resume_item:hover span {
+   top: -20%;
+   opacity: 1;
+   transform: scale(1);
+}
+
+/* ---------- About tab ---------- */
+.resume_detail.about .resume_list {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+   max-height: none;
+   overflow: visible;
+   gap: 1.5rem;
+}
+
+.resume_detail.about .resume_item {
+   min-height: auto;
+   padding: 1.6rem 2rem;
+   background: var(--second-bg-color);
+   border-radius: 1rem;
+   border: 1px solid rgba(255, 255, 255, 0.06);
+   border-left: 3px solid var(--main-color);
+   transition: all 0.3s ease;
+}
+
+.resume_detail.about .resume_item:hover {
+   transform: translateX(5px);
+   border-color: rgba(154, 205, 50, 0.3);
+   border-left-color: var(--main-color);
+}
+
+.resume_detail.about .resume_item p {
+   color: var(--main-color);
+   font-size: 1.5rem;
+   font-weight: 600;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 1rem;
+   margin: 0;
+}
+
+.resume_detail.about .resume_item p span {
+   color: var(--white-color);
+   font-size: 1.45rem;
+   font-weight: 400;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+   .resume_container {
+      padding-left: 5%;
+      padding-right: 5%;
+      gap: 5rem;
+   }
+}
+
+@media (max-width: 992px) {
+   .resume_container {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+   }
+}
+
+@media (max-width: 768px) {
+   .resume_container {
+      padding: 12rem 5% 10rem;
+      gap: 4rem;
+   }
+
+   .resume_box h2,
+   .resume_box .heading {
+      font-size: 3rem;
+   }
+}
+
+@media (max-width: 576px) {
+   .resume_container {
+      padding: 8rem 4% 6rem;
+      gap: 3rem;
+   }
+
+   .resume_box h2,
+   .resume_box .heading {
+      font-size: 2.6rem;
+   }
+
+   .resume_box .desc {
+      font-size: 1.4rem;
+   }
+
+   .resume_box .resume-btn {
+      font-size: 1.4rem;
+      height: 4.5rem;
+   }
+
+   .timeline_header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+   }
+}

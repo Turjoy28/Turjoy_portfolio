@@ -1,0 +1,344 @@
+.Home {
+   display: flex;
+   align-items: center;
+   padding: 60px 9% 0;
+   color: aliceblue;
+   gap: 150px;
+   height: 100vh;
+   visibility: hidden;
+   opacity: 0;
+   animation: show-content 1.5s linear forwards;
+   animation-delay: 1.5s;
+}
+
+/* ---------- Animated role text ---------- */
+.home-info h2 .text-animate span {
+   position: absolute;
+   left: 0;
+   top: 0;
+   display: inline-block;
+   color: transparent;
+   -webkit-text-stroke: 0.7px yellowgreen;
+   animation: display-text 16s ease-in-out infinite;
+   animation-delay: calc(-4s * var(--i));
+   opacity: 0;
+   white-space: nowrap;
+}
+
+@keyframes display-text {
+   0%, 5% {
+      opacity: 0;
+      visibility: hidden;
+   }
+   6%, 24% {
+      opacity: 1;
+      visibility: visible;
+   }
+   25%, 100% {
+      opacity: 0;
+      visibility: hidden;
+   }
+}
+
+.home-info h2 .text-animate span::before {
+   content: attr(data-text);
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 0;
+   border-right: 2px solid yellowgreen;
+   color: yellowgreen;
+   white-space: nowrap;
+   overflow: hidden;
+   animation: fill-text 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes fill-text {
+   0%, 5% {
+      width: 0;
+      border-right-color: yellowgreen;
+   }
+   10% {
+      width: 0;
+   }
+   50% {
+      width: 100%;
+      border-right-color: yellowgreen;
+   }
+   75%, 85% {
+      width: 100%;
+      border-right-color: transparent;
+   }
+   95%, 100% {
+      width: 0;
+      border-right-color: transparent;
+   }
+}
+
+.home-info h1 {
+   font-size: 70px;
+   font-weight: bold;
+}
+
+.home-info h2 {
+   display: flex;
+   align-items: baseline;
+   font-size: 32px;
+   margin-top: -10px;
+   position: relative;
+   flex-wrap: wrap;
+}
+
+.home-info h2 .text-animate {
+   position: relative;
+   display: inline-block;
+   min-width: 280px;
+   height: 1em;
+   margin-left: 10px;
+}
+
+.home-info p {
+   font-size: 16px;
+   margin: 10px 0 25px;
+}
+
+/* ---------- CV button & social icons ---------- */
+.home-info .btn-sci {
+   display: flex;
+   align-items: center;
+}
+
+.home-info .btn-sci .sci {
+   margin-left: 20px;
+}
+
+.home-info .btn-sci .sci a {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 4rem;
+   height: 4rem;
+   border: 2px solid yellowgreen;
+   border-radius: 50%;
+   margin: 0 10px;
+   font-size: 1.8rem;
+   transition: all 0.5s ease;
+   color: yellowgreen;
+}
+
+.home-info .btn-sci .sci a:hover {
+   background: greenyellow;
+   color: rgb(32, 14, 56);
+   box-shadow: 0 0 10px yellowgreen;
+}
+
+/* ---------- Portrait with rotating border ---------- */
+.home-img .img-box {
+   position: relative;
+   width: 27vw;
+   height: 27vw;
+   border-radius: 50%;
+   padding: 4px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+.home-img .img-box::before,
+.home-img .img-box::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: conic-gradient(transparent, transparent, transparent, yellowgreen);
+   transform: rotate(0deg);
+   animation: rotate-border 10s linear infinite;
+   z-index: 0;
+}
+
+.home-img .img-box::after {
+   animation-delay: -5s;
+}
+
+@keyframes rotate-border {
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+.home-img .img-box .img-item {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background: #1f242d;
+   border-radius: 50%;
+   display: flex;
+   border: .5px solid #1f242d;
+   justify-content: center;
+   overflow: hidden;
+   z-index: 1;
+}
+
+.home-img .img-box .img-item img {
+   top: 10px;
+   position: absolute;
+   display: block;
+   width: 85%;
+   object-fit: cover;
+   mix-blend-mode: lighten;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+   .Home {
+      padding: 8rem 5% 0;
+      gap: 8rem;
+   }
+}
+
+/* For Standard Tablets */
+@media (max-width: 992px) {
+   .Home {
+      flex-direction: column-reverse;
+      text-align: center;
+      height: auto;
+      padding: 12rem 5% 5rem;
+      gap: 4rem;
+   }
+
+   .home-info h2 {
+      justify-content: center;
+   }
+
+   .home-info h2 .text-animate {
+      margin-left: 8px;
+   }
+
+   .home-img .img-box {
+      width: 45vw;
+      height: 45vw;
+      max-width: 320px;
+      max-height: 320px;
+      margin-bottom: 2rem;
+   }
+
+   .home-info .btn-sci {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+   }
+
+   .home-info .btn-sci .sci {
+      margin-left: 0;
+   }
+}
+
+/* For Large Phones and Small Tablets */
+@media (max-width: 768px) {
+   .home-info h1 {
+      font-size: 4.5rem;
+   }
+
+   .home-info h2 {
+      font-size: 2.4rem;
+      margin-top: -5px;
+      justify-content: center;
+   }
+
+   .home-info h2 .text-animate {
+      min-width: 200px;
+      margin-left: 7px;
+   }
+
+   .home-info p {
+      font-size: 1.5rem;
+      line-height: 1.7;
+   }
+
+   .home-img .img-box {
+      width: 55vw;
+      height: 55vw;
+      max-width: 280px;
+      max-height: 280px;
+   }
+}
+
+/* For Standard Mobile Phones */
+@media (max-width: 576px) {
+   .Home {
+      padding: 10rem 4% 4rem;
+      gap: 3rem;
+   }
+
+   .home-info h1 {
+      font-size: 3.8rem;
+   }
+
+   .home-info h2 {
+      font-size: 2rem;
+      justify-content: center;
+   }
+
+   .home-info h2 .text-animate {
+      min-width: 170px;
+      margin-left: 6px;
+   }
+
+   .home-info p {
+      font-size: 1.4rem;
+      text-align: justify;
+   }
+
+   .home-img .img-box {
+      width: 70vw;
+      height: 70vw;
+      max-width: 250px;
+      max-height: 250px;
+   }
+
+   .home-info .btn-sci {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+   }
+
+   .home-info .btn-sci .sci {
+      margin-left: 0;
+   }
+
+   .home-info .btn-sci .sci a {
+      width: 4.2rem;
+      height: 4.2rem;
+      font-size: 1.8rem;
+      margin: 0 8px;
+   }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+   .Home {
+      padding: 9rem 3% 3rem;
+   }
+
+   .home-info h1 {
+      font-size: 3.2rem;
+   }
+
+   .home-info h2 {
+      font-size: 1.8rem;
+      justify-content: center;
+   }
+
+   .home-info h2 .text-animate {
+      min-width: 145px;
+      margin-left: 5px;
+   }
+
+   .home-img .img-box {
+      width: 75vw;
+      height: 75vw;
+      max-width: 220px;
+      max-height: 220px;
+   }
+}

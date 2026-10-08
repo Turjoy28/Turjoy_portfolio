@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Global styles: reset, design tokens, shared utilities & keyframes.
+   Component-specific styles live next to each component.
+   ========================================================================== */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+:root {
+   --bg-color: #1f242d;
+   --second-bg-color: #323946;
+   --main-color: yellowgreen;
+   --white-color: #fff;
+   --disabled-color: #fff3;
+}
+
+html {
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+}
+
+a {
+   color: white;
+   text-decoration: none;
+}
+
+button {
+   font-family: inherit;
+}
+
+/* Shared fade-in used by the navbar and the hero section */
+@keyframes show-content {
+   100% {
+      visibility: visible;
+      opacity: 1;
+   }
+}
+
+/* ---------- Primary button ---------- */
+.btn {
+   display: inline-block;
+   padding: 10px 30px;
+   background: greenyellow;
+   border: 2px solid greenyellow;
+   border-radius: 40px;
+   box-shadow: 0 0 10px greenyellow;
+   font-size: 16px;
+   color: black;
+   font-weight: 600;
+   transition: .5s;
+}
+
+.btn:hover {
+   background: transparent;
+   color: greenyellow;
+   box-shadow: none;
+}
+
+.btn:disabled {
+   opacity: 0.7;
+   cursor: wait;
+}
+
+/* ---------- Section heading ---------- */
+.heading {
+   color: white;
+   font-size: 5rem;
+   padding-top: 17rem;
+   display: flex;
+   justify-content: center;
+}
+
+.heading span {
+   color: var(--main-color);
+   padding-left: 0.7vw;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+   html {
+      font-size: 55%;
+   }
+}
+
+@media (max-width: 768px) {
+   .heading {
+      font-size: 4rem;
+      padding-top: 12rem;
+   }
+
+   .btn {
+      padding: 1rem 2.5rem;
+      font-size: 1.5rem;
+   }
+}
+
+@media (max-width: 576px) {
+   html {
+      font-size: 52%;
+   }
+
+   .heading {
+      font-size: 3.2rem;
+      padding-top: 8rem;
+   }
+}
+
+@media (max-width: 400px) {
+   html {
+      font-size: 48%;
+   }
+
+   .heading {
+      font-size: 2.8rem;
+   }
+}
