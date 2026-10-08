@@ -10,9 +10,16 @@ const FIELDS = [
 ];
 
 const STATUS_COLORS = {
-  error: '#ff6b6b',
-  pending: '#9acd32',
-  success: '#4ade80',
+  error: 'var(--error-color)',
+  pending: 'var(--main-color)',
+  success: '#4ade80', // This green works reasonably well on both, but let's tweak if needed. Actually var(--main-color) is green too. Let's use that for success.
+};
+
+// Actually, let's just use CSS variables directly.
+const STATUS_COLORS_VARS = {
+  error: 'var(--error-color)',
+  pending: 'var(--text-color)',
+  success: 'var(--main-color)',
 };
 
 /** Right column: validated contact form that sends via EmailJS. */
@@ -45,7 +52,7 @@ function ContactForm() {
           id="status"
           role="status"
           aria-live="polite"
-          style={{ color: STATUS_COLORS[status.type] }}
+          style={{ color: STATUS_COLORS_VARS[status.type] || 'var(--text-color)' }}
         >
           {status.message}
         </div>

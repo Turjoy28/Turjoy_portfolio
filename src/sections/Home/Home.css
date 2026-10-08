@@ -2,7 +2,7 @@
    display: flex;
    align-items: center;
    padding: 60px 9% 0;
-   color: aliceblue;
+   color: var(--text-color);
    gap: 150px;
    height: 100vh;
    visibility: hidden;
@@ -18,7 +18,7 @@
    top: 0;
    display: inline-block;
    color: transparent;
-   -webkit-text-stroke: 0.7px yellowgreen;
+   -webkit-text-stroke: 0.7px var(--main-color);
    animation: display-text 16s ease-in-out infinite;
    animation-delay: calc(-4s * var(--i));
    opacity: 0;
@@ -46,8 +46,8 @@
    left: 0;
    top: 0;
    width: 0;
-   border-right: 2px solid yellowgreen;
-   color: yellowgreen;
+   border-right: 2px solid var(--main-color);
+   color: var(--main-color);
    white-space: nowrap;
    overflow: hidden;
    animation: fill-text 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
@@ -56,14 +56,14 @@
 @keyframes fill-text {
    0%, 5% {
       width: 0;
-      border-right-color: yellowgreen;
+      border-right-color: var(--main-color);
    }
    10% {
       width: 0;
    }
    50% {
       width: 100%;
-      border-right-color: yellowgreen;
+      border-right-color: var(--main-color);
    }
    75%, 85% {
       width: 100%;
@@ -78,6 +78,7 @@
 .home-info h1 {
    font-size: 70px;
    font-weight: bold;
+   color: var(--text-color);
 }
 
 .home-info h2 {
@@ -87,6 +88,7 @@
    margin-top: -10px;
    position: relative;
    flex-wrap: wrap;
+   color: var(--text-color);
 }
 
 .home-info h2 .text-animate {
@@ -100,6 +102,7 @@
 .home-info p {
    font-size: 16px;
    margin: 10px 0 25px;
+   color: var(--text-secondary);
 }
 
 /* ---------- CV button & social icons ---------- */
@@ -118,18 +121,18 @@
    justify-content: center;
    width: 4rem;
    height: 4rem;
-   border: 2px solid yellowgreen;
+   border: 2px solid var(--main-color);
    border-radius: 50%;
    margin: 0 10px;
    font-size: 1.8rem;
    transition: all 0.5s ease;
-   color: yellowgreen;
+   color: var(--main-color);
 }
 
 .home-info .btn-sci .sci a:hover {
-   background: greenyellow;
-   color: rgb(32, 14, 56);
-   box-shadow: 0 0 10px yellowgreen;
+   background: var(--main-color);
+   color: #fff;
+   box-shadow: 0 0 10px rgba(var(--main-color-rgb), 0.4);
 }
 
 /* ---------- Portrait with rotating border ---------- */
@@ -151,7 +154,7 @@
    position: absolute;
    width: 100%;
    height: 100%;
-   background: conic-gradient(transparent, transparent, transparent, yellowgreen);
+   background: conic-gradient(transparent, transparent, transparent, var(--main-color));
    transform: rotate(0deg);
    animation: rotate-border 10s linear infinite;
    z-index: 0;
@@ -171,10 +174,10 @@
    position: relative;
    width: 100%;
    height: 100%;
-   background: #1f242d;
+   background: var(--img-bg-circle);
    border-radius: 50%;
    display: flex;
-   border: .5px solid #1f242d;
+   border: .5px solid var(--img-bg-circle);
    justify-content: center;
    overflow: hidden;
    z-index: 1;
@@ -186,7 +189,7 @@
    display: block;
    width: 85%;
    object-fit: cover;
-   mix-blend-mode: lighten;
+   mix-blend-mode: var(--img-blend);
 }
 
 /* ---------- Responsive ---------- */

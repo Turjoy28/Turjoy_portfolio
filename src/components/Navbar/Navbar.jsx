@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark, faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { navLinks } from '../../data/navigation';
 import './Navbar.css';
 
 const DESKTOP_BREAKPOINT = 992;
 const MENU_TRANSITION_MS = 400; // matches the `.navbar ul` slide transition
 
-function Navbar({ activeSection, onNavigate }) {
+function Navbar({ activeSection, onNavigate, theme, onToggleTheme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollTimer = useRef(null);
 
@@ -65,17 +65,31 @@ function Navbar({ activeSection, onNavigate }) {
             Portfolio
           </a>
 
-          <button
-            type="button"
-            id="menu-icon"
-            className={isMenuOpen ? 'active' : ''}
-            onClick={toggleMenu}
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={isMenuOpen}
-            aria-controls="nav-menu"
-          >
-            <FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} />
-          </button>
+          <div className="navbar-actions">
+            {/* Theme toggle */}
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={onToggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
+            >
+              <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} />
+            </button>
+
+            {/* Hamburger menu (mobile) */}
+            <button
+              type="button"
+              id="menu-icon"
+              className={isMenuOpen ? 'active' : ''}
+              onClick={toggleMenu}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMenuOpen}
+              aria-controls="nav-menu"
+            >
+              <FontAwesomeIcon icon={isMenuOpen ? faXmark : faBars} />
+            </button>
+          </div>
 
           <ul id="nav-menu" className={isMenuOpen ? 'active' : ''}>
             <li className="mobile-menu-header">

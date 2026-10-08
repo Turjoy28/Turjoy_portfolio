@@ -2,7 +2,7 @@
    display: grid;
    grid-template-columns: 1fr 2fr;
    gap: 6rem;
-   color: white;
+   color: var(--text-color);
    padding: 15rem 10% 12rem;
    align-items: start;
 }
@@ -12,16 +12,18 @@
    font-weight: 700;
    line-height: 1.2;
    margin-bottom: 0;
+   color: var(--text-color);
 }
 
 .resume_box p {
    font-size: 1.5rem;
    line-height: 1.7;
+   color: var(--text-secondary);
 }
 
 .resume_box .desc {
    margin: 2rem 0 3rem;
-   color: rgba(255, 255, 255, 0.85);
+   color: var(--text-secondary);
    border-left: 3px solid var(--main-color);
    padding-left: 2rem;
    font-style: italic;
@@ -34,7 +36,7 @@
    background: var(--second-bg-color);
    border: 2px solid transparent;
    font-size: 1.5rem;
-   color: var(--white-color);
+   color: var(--text-color);
    font-weight: 500;
    margin-bottom: 1.5rem;
    border-radius: 1rem;
@@ -42,17 +44,18 @@
    transition: all 0.3s ease;
    position: relative;
    overflow: hidden;
+   box-shadow: 0 2px 8px var(--card-shadow);
 }
 
 .resume_box .resume-btn:hover {
-   background: rgba(154, 205, 50, 0.1);
-   border-color: rgba(154, 205, 50, 0.3);
+   background: rgba(var(--main-color-rgb), 0.1);
+   border-color: rgba(var(--main-color-rgb), 0.3);
 }
 
 .resume_box .resume-btn.active {
    border-color: var(--main-color);
    color: var(--main-color);
-   background: rgba(154, 205, 50, 0.1);
+   background: rgba(var(--main-color-rgb), 0.1);
    font-weight: 600;
 }
 
@@ -64,6 +67,7 @@
    padding-top: 0;
    margin-bottom: 0;
    line-height: 1.2;
+   color: var(--text-color);
 }
 
 .resume_detail {
@@ -86,7 +90,7 @@
 }
 
 .resume_list::-webkit-scrollbar-track {
-   background: rgba(255, 255, 255, 0.05);
+   background: var(--scrollbar-track);
    border-radius: 1rem;
 }
 
@@ -96,7 +100,7 @@
 }
 
 .resume_list:hover::-webkit-scrollbar-thumb {
-   background: greenyellow;
+   background: var(--main-glow);
 }
 
 /* ---------- Timeline List (Experience & Education) ---------- */
@@ -110,16 +114,17 @@
    background: var(--second-bg-color);
    border-radius: 1.2rem;
    padding: 2.2rem 2.5rem;
-   border: 1px solid rgba(255, 255, 255, 0.08);
+   border: 1px solid var(--card-border);
    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
    display: flex;
    flex-direction: column;
+   box-shadow: 0 2px 10px var(--card-shadow);
 }
 
 .resume_item.timeline_item:hover {
    border-color: var(--main-color);
    transform: translateY(-3px);
-   box-shadow: 0 10px 30px rgba(154, 205, 50, 0.12);
+   box-shadow: 0 10px 30px rgba(var(--main-color-rgb), 0.12);
 }
 
 .timeline_header {
@@ -140,7 +145,7 @@
 .timeline_title_group h3 {
    font-size: 2.1rem;
    font-weight: 700;
-   color: #ffffff;
+   color: var(--text-color);
    line-height: 1.3;
    margin: 0;
 }
@@ -156,8 +161,8 @@
    color: var(--main-color);
    font-size: 1.3rem;
    font-weight: 600;
-   background: rgba(154, 205, 50, 0.12);
-   border: 1px solid rgba(154, 205, 50, 0.3);
+   background: rgba(var(--main-color-rgb), 0.12);
+   border: 1px solid rgba(var(--main-color-rgb), 0.3);
    padding: 0.4rem 1.4rem;
    border-radius: 2rem;
    white-space: nowrap;
@@ -167,7 +172,7 @@
 .timeline_desc {
    font-size: 1.45rem;
    line-height: 1.7;
-   color: rgba(255, 255, 255, 0.85);
+   color: var(--text-secondary);
    margin-bottom: 1rem;
 }
 
@@ -183,7 +188,7 @@
 .resume_points li {
    font-size: 1.45rem;
    line-height: 1.65;
-   color: rgba(255, 255, 255, 0.88);
+   color: var(--text-secondary);
 }
 
 .resume_points li::marker {
@@ -206,8 +211,8 @@
    font-size: 1.3rem;
    color: var(--main-color);
    font-weight: 600;
-   background: rgba(154, 205, 50, 0.1);
-   border: 1px solid rgba(154, 205, 50, 0.3);
+   background: rgba(var(--main-color-rgb), 0.1);
+   border: 1px solid rgba(var(--main-color-rgb), 0.3);
    padding: 0.5rem 1.4rem;
    border-radius: 2rem;
    text-decoration: none;
@@ -216,9 +221,9 @@
 
 .resume_links a:hover {
    background: var(--main-color);
-   color: var(--bg-color);
+   color: #ffffff;
    border-color: var(--main-color);
-   box-shadow: 0 4px 15px rgba(154, 205, 50, 0.3);
+   box-shadow: 0 4px 15px rgba(var(--main-color-rgb), 0.3);
 }
 
 /* ---------- Skills tab ---------- */
@@ -234,7 +239,7 @@
    position: relative;
    background: var(--second-bg-color);
    border-radius: 1.2rem;
-   border: 1px solid rgba(255, 255, 255, 0.08);
+   border: 1px solid var(--card-border);
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -242,18 +247,19 @@
    min-height: 14rem;
    padding: 2rem;
    transition: all 0.3s ease;
+   box-shadow: 0 2px 10px var(--card-shadow);
 }
 
 .resume_detail.skill .resume_item:hover {
    border-color: var(--main-color);
    transform: translateY(-5px);
-   box-shadow: 0 10px 25px rgba(154, 205, 50, 0.15);
+   box-shadow: 0 10px 25px rgba(var(--main-color-rgb), 0.15);
 }
 
 .resume_detail.skill .resume_item svg {
    font-size: 5.5rem;
    transition: .4s ease;
-   color: #ffffff;
+   color: var(--text-color);
 }
 
 .resume_detail.skill .resume_item:hover svg {
@@ -265,7 +271,7 @@
    position: absolute;
    top: -15%;
    background: var(--main-color);
-   color: var(--bg-color);
+   color: #ffffff;
    font-size: 1.3rem;
    font-weight: 600;
    padding: .6rem 1.2rem;
@@ -297,14 +303,15 @@
    padding: 1.6rem 2rem;
    background: var(--second-bg-color);
    border-radius: 1rem;
-   border: 1px solid rgba(255, 255, 255, 0.06);
+   border: 1px solid var(--card-border);
    border-left: 3px solid var(--main-color);
    transition: all 0.3s ease;
+   box-shadow: 0 2px 8px var(--card-shadow);
 }
 
 .resume_detail.about .resume_item:hover {
    transform: translateX(5px);
-   border-color: rgba(154, 205, 50, 0.3);
+   border-color: rgba(var(--main-color-rgb), 0.3);
    border-left-color: var(--main-color);
 }
 
@@ -321,7 +328,7 @@
 }
 
 .resume_detail.about .resume_item p span {
-   color: var(--white-color);
+   color: var(--text-color);
    font-size: 1.45rem;
    font-weight: 400;
 }

@@ -12,9 +12,47 @@
    opacity: 0;
    animation: show-content 1.5s linear forwards;
    animation-delay: 0.6s;
-   background: rgba(31, 36, 45, 0.95);
+   background: var(--overlay-bg);
    backdrop-filter: blur(10px);
    -webkit-backdrop-filter: blur(10px);
+   border-bottom: 1px solid var(--card-border);
+}
+
+/* ---------- Navbar actions (theme toggle + hamburger) ---------- */
+.navbar-actions {
+   display: flex;
+   align-items: center;
+   gap: 1.2rem;
+   order: 3;
+}
+
+/* ---------- Theme toggle button ---------- */
+.theme-toggle {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 4.2rem;
+   height: 4.2rem;
+   border-radius: 50%;
+   border: 2px solid var(--main-color);
+   background: rgba(var(--main-color-rgb), 0.1);
+   color: var(--main-color);
+   font-size: 1.6rem;
+   cursor: pointer;
+   transition: all 0.4s ease;
+   position: relative;
+   overflow: hidden;
+}
+
+.theme-toggle:hover {
+   background: var(--main-color);
+   color: #fff;
+   transform: rotate(30deg) scale(1.1);
+   box-shadow: 0 0 20px rgba(var(--main-color-rgb), 0.4);
+}
+
+[data-theme='light'] .theme-toggle:hover {
+   color: #ffffff;
 }
 
 /* Mobile Menu Icon */
@@ -22,7 +60,7 @@
    display: none;
    font-size: 2.6rem;
    line-height: 0;
-   color: var(--white-color);
+   color: var(--text-color);
    cursor: pointer;
    transition: all 0.3s ease;
    padding: 0.8rem;
@@ -33,18 +71,19 @@
 
 .navbar #menu-icon:hover {
    color: var(--main-color);
-   background: rgba(154, 205, 50, 0.1);
+   background: rgba(var(--main-color-rgb), 0.1);
 }
 
 .navbar #menu-icon.active {
    color: var(--main-color);
    transform: rotate(180deg);
-   background: rgba(154, 205, 50, 0.15);
+   background: rgba(var(--main-color-rgb), 0.15);
 }
 
 .navbar .logo {
    font-size: 30px;
    font-weight: 700;
+   color: var(--text-color);
 }
 
 .navbar ul {
@@ -69,6 +108,7 @@
 .navbar ul li a {
    font-size: 20px;
    font-weight: 500;
+   color: var(--text-color);
    transition: .5s;
 }
 
@@ -97,7 +137,7 @@
       right: -100%;
       width: 300px;
       height: 100vh;
-      background: #1f242d;
+      background: var(--mobile-menu-bg);
       flex-direction: column;
       align-items: stretch;
       justify-content: flex-start;
@@ -121,7 +161,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 25px 25px;
-      background: rgba(154, 205, 50, 0.1);
+      background: rgba(var(--main-color-rgb), 0.1);
       border-bottom: 2px solid var(--main-color);
       margin-bottom: 10px;
    }
@@ -136,7 +176,7 @@
    .navbar ul li.mobile-menu-header #close-menu {
       font-size: 24px;
       line-height: 0;
-      color: var(--white-color);
+      color: var(--text-color);
       background: transparent;
       border: none;
       cursor: pointer;
@@ -150,7 +190,7 @@
 
    .navbar ul li.mobile-menu-header #close-menu:hover {
       color: var(--main-color);
-      background: rgba(154, 205, 50, 0.15);
+      background: rgba(var(--main-color-rgb), 0.15);
       transform: rotate(90deg);
    }
 
@@ -159,7 +199,7 @@
       margin: 0;
       width: 100%;
       list-style: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid var(--card-border);
       -webkit-tap-highlight-color: transparent;
    }
 
@@ -170,7 +210,7 @@
       padding: 20px 25px;
       font-size: 17px;
       font-weight: 500;
-      color: var(--white-color);
+      color: var(--text-color);
       transition: all 0.3s ease;
       position: relative;
       cursor: pointer;
@@ -207,7 +247,7 @@
    .navbar ul li a:hover,
    .navbar ul li a.active {
       color: var(--main-color);
-      background: rgba(154, 205, 50, 0.08);
+      background: rgba(var(--main-color-rgb), 0.08);
       padding-left: 35px;
    }
 
@@ -272,6 +312,12 @@
    .navbar ul li a:hover,
    .navbar ul li a.active {
       padding-left: 30px;
+   }
+
+   .theme-toggle {
+      width: 3.6rem;
+      height: 3.6rem;
+      font-size: 1.4rem;
    }
 }
 
