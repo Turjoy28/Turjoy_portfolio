@@ -42,9 +42,12 @@
 
 .Services_box .icon a {
    display: inline-flex;
+   align-items: center;
+   gap: 0.8rem;
    background: var(--main-color);
-   border-radius: 50%;
-   padding: 1rem;
+   border-radius: 4rem;
+   padding: 1rem 1.8rem;
+   text-decoration: none;
 }
 
 .Services_box:hover .icon a {
@@ -52,9 +55,15 @@
    box-shadow: 0 4px 15px rgba(var(--main-color-rgb), 0.4);
 }
 
+.Services_box .icon a span {
+   font-size: 1.4rem;
+   font-weight: 600;
+   color: var(--btn-text-color);
+}
+
 .Services_box .icon a svg {
-   font-size: 2.6rem;
-   color: #ffffff;
+   font-size: 2rem;
+   color: var(--btn-text-color);
 }
 
 .Services_box .icon a:hover svg {

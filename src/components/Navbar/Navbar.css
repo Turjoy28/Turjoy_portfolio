@@ -7,7 +7,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   z-index: 100;
+   z-index: 1000;
    visibility: hidden;
    opacity: 0;
    animation: show-content 1.5s linear forwards;

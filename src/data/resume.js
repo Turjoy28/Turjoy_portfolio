@@ -151,7 +151,7 @@ export const resumeTabs = [
       { name: 'Vue.js', icon: faVuejs },
       { name: 'Tailwind Css', icon: faCss3 },
       { name: 'Node.js', icon: faNodeJs },
-      { name: 'MongoDB , MySQL , MsSQL', icon: faDatabase },
+      { name: 'MongoDB , MySQL , PostgreSQL', icon: faDatabase },
       { name: 'AWS', icon: faAws },
       { name: 'CI/CD', icon: faCodeBranch },
       { name: 'Docker', icon: faDocker },

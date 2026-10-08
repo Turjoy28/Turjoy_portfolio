@@ -7,6 +7,7 @@ function ServiceCard({ icon, title, description }) {
       <div className="icon">
         <FontAwesomeIcon icon={icon} className="service-icon" />
         <a href="#contact" aria-label={`Get in touch about ${title}`}>
+          <span>Click</span>
           <FontAwesomeIcon icon={faArrowLeftLong} />
         </a>
       </div>

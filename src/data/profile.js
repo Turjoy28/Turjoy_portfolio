@@ -18,7 +18,7 @@ export const profile = {
     'motivated to join a dynamic team where I can contribute, learn, and help deliver high-quality ' +
     'products that drive business growth.',
   image: 'images/home2.png',
-  cv: 'cv/Dev_Turjoy.pdf',
+  cv: 'cv/Saif_resume.pdf',
 };
 
 /**
