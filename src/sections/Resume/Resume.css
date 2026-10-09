@@ -44,7 +44,7 @@
    transition: all 0.3s ease;
    position: relative;
    overflow: hidden;
-   box-shadow: 0 2px 0.8rem var(--card-shadow);
+   box-shadow: 0 2px 8px var(--card-shadow);
 }
 
 .resume_box .resume-btn:hover {
@@ -118,13 +118,13 @@
    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
    display: flex;
    flex-direction: column;
-   box-shadow: 0 2px 1rem var(--card-shadow);
+   box-shadow: 0 2px 10px var(--card-shadow);
 }
 
 .resume_item.timeline_item:hover {
    border-color: var(--main-color);
-   transform: translateY(-0.3rem);
-   box-shadow: 0 1rem 3rem rgba(var(--main-color-rgb), 0.12);
+   transform: translateY(-3px);
+   box-shadow: 0 10px 30px rgba(var(--main-color-rgb), 0.12);
 }
 
 .timeline_header {
@@ -223,7 +223,7 @@
    background: var(--main-color);
    color: #ffffff;
    border-color: var(--main-color);
-   box-shadow: 0 0.4rem 1.5rem rgba(var(--main-color-rgb), 0.3);
+   box-shadow: 0 4px 15px rgba(var(--main-color-rgb), 0.3);
 }
 
 /* ---------- Skills tab ---------- */
@@ -247,13 +247,13 @@
    min-height: 14rem;
    padding: 2rem;
    transition: all 0.3s ease;
-   box-shadow: 0 2px 1rem var(--card-shadow);
+   box-shadow: 0 2px 10px var(--card-shadow);
 }
 
 .resume_detail.skill .resume_item:hover {
    border-color: var(--main-color);
-   transform: translateY(-0.5rem);
-   box-shadow: 0 1rem 2.5rem rgba(var(--main-color-rgb), 0.15);
+   transform: translateY(-5px);
+   box-shadow: 0 10px 25px rgba(var(--main-color-rgb), 0.15);
 }
 
 .resume_detail.skill .resume_item svg {
@@ -306,11 +306,11 @@
    border: 1px solid var(--card-border);
    border-left: 3px solid var(--main-color);
    transition: all 0.3s ease;
-   box-shadow: 0 2px 0.8rem var(--card-shadow);
+   box-shadow: 0 2px 8px var(--card-shadow);
 }
 
 .resume_detail.about .resume_item:hover {
-   transform: translateX(0.5rem);
+   transform: translateX(5px);
    border-color: rgba(var(--main-color-rgb), 0.3);
    border-left-color: var(--main-color);
 }

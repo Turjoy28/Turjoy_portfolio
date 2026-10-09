@@ -3,7 +3,7 @@
    left: 0;
    top: 0;
    width: 100%;
-   padding: 1.5rem 9%;
+   padding: 25px 9%;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -13,8 +13,8 @@
    animation: show-content 1.5s linear forwards;
    animation-delay: 0.6s;
    background: var(--overlay-bg);
-   backdrop-filter: blur(1rem);
-   -webkit-backdrop-filter: blur(1rem);
+   backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
    border-bottom: 1px solid var(--card-border);
 }
 
@@ -22,7 +22,7 @@
 .navbar-actions {
    display: flex;
    align-items: center;
-   gap: 1rem;
+   gap: 1.2rem;
    order: 3;
 }
 
@@ -31,13 +31,13 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   width: 3.5rem;
-   height: 3.5rem;
+   width: 4.2rem;
+   height: 4.2rem;
    border-radius: 50%;
-   border: 0.2rem solid var(--main-color);
+   border: 2px solid var(--main-color);
    background: rgba(var(--main-color-rgb), 0.1);
    color: var(--main-color);
-   font-size: 1.4rem;
+   font-size: 1.6rem;
    cursor: pointer;
    transition: all 0.4s ease;
    position: relative;
@@ -48,7 +48,7 @@
    background: var(--main-color);
    color: #fff;
    transform: rotate(30deg) scale(1.1);
-   box-shadow: 0 0 1.5rem rgba(var(--main-color-rgb), 0.4);
+   box-shadow: 0 0 20px rgba(var(--main-color-rgb), 0.4);
 }
 
 [data-theme='light'] .theme-toggle:hover {
@@ -58,12 +58,12 @@
 /* Mobile Menu Icon */
 .navbar #menu-icon {
    display: none;
-   font-size: 2.2rem;
+   font-size: 2.6rem;
    line-height: 0;
    color: var(--text-color);
    cursor: pointer;
    transition: all 0.3s ease;
-   padding: 0.6rem;
+   padding: 0.8rem;
    border: none;
    border-radius: 0.5rem;
    background: transparent;
@@ -81,7 +81,7 @@
 }
 
 .navbar .logo {
-   font-size: 2.4rem;
+   font-size: 30px;
    font-weight: 700;
    color: var(--text-color);
 }
@@ -92,7 +92,7 @@
 
 .navbar ul li {
    list-style: none;
-   margin-left: 3rem;
+   margin-left: 40px;
 }
 
 /* Hide mobile menu header on desktop */
@@ -106,7 +106,7 @@
 }
 
 .navbar ul li a {
-   font-size: 1.6rem;
+   font-size: 20px;
    font-weight: 500;
    color: var(--text-color);
    transition: .5s;
@@ -135,7 +135,7 @@
       position: fixed;
       top: 0;
       right: -100%;
-      width: 30rem;
+      width: 300px;
       height: 100vh;
       background: var(--mobile-menu-bg);
       flex-direction: column;
@@ -144,7 +144,7 @@
       padding-top: 0;
       gap: 0;
       transition: right 0.4s ease;
-      box-shadow: -0.5rem 0 3rem rgba(0, 0, 0, 0.5);
+      box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
       z-index: 1000;
       display: flex;
       border-left: 3px solid var(--main-color);
@@ -160,27 +160,27 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 2.5rem 2.5rem;
+      padding: 25px 25px;
       background: rgba(var(--main-color-rgb), 0.1);
       border-bottom: 2px solid var(--main-color);
-      margin-bottom: 1rem;
+      margin-bottom: 10px;
    }
 
    .navbar ul li.mobile-menu-header .menu-title {
-      font-size: 2.2rem;
+      font-size: 22px;
       font-weight: 700;
       color: var(--main-color);
       letter-spacing: 1px;
    }
 
    .navbar ul li.mobile-menu-header #close-menu {
-      font-size: 2.4rem;
+      font-size: 24px;
       line-height: 0;
       color: var(--text-color);
       background: transparent;
       border: none;
       cursor: pointer;
-      padding: 0.8rem;
+      padding: 8px;
       border-radius: 50%;
       transition: all 0.3s ease;
       display: flex;
@@ -206,9 +206,9 @@
    .navbar ul li a {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
-      padding: 2rem 2.5rem;
-      font-size: 1.7rem;
+      gap: 15px;
+      padding: 20px 25px;
+      font-size: 17px;
       font-weight: 500;
       color: var(--text-color);
       transition: all 0.3s ease;
@@ -219,8 +219,8 @@
 
    .navbar ul li a .nav-icon {
       display: inline-block;
-      font-size: 1.8rem;
-      width: 2.5rem;
+      font-size: 18px;
+      width: 25px;
       text-align: center;
       color: var(--main-color);
       transition: transform 0.3s ease;
@@ -232,7 +232,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      width: 0.4rem;
+      width: 4px;
       height: 100%;
       background: var(--main-color);
       transform: scaleY(0);
@@ -248,7 +248,7 @@
    .navbar ul li a.active {
       color: var(--main-color);
       background: rgba(var(--main-color-rgb), 0.08);
-      padding-left: 3.5rem;
+      padding-left: 35px;
    }
 
    .navbar ul li a:hover .nav-icon {
@@ -291,27 +291,27 @@
    }
 
    .navbar ul li.mobile-menu-header {
-      padding: 2rem 2rem;
+      padding: 20px 20px;
    }
 
    .navbar ul li.mobile-menu-header .menu-title {
-      font-size: 2rem;
+      font-size: 20px;
    }
 
    .navbar ul li a {
-      font-size: 1.6rem;
-      padding: 1.8rem 2rem;
-      gap: 1.2rem;
+      font-size: 16px;
+      padding: 18px 20px;
+      gap: 12px;
    }
 
    .navbar ul li a .nav-icon {
-      font-size: 1.6rem;
-      width: 2.2rem;
+      font-size: 16px;
+      width: 22px;
    }
 
    .navbar ul li a:hover,
    .navbar ul li a.active {
-      padding-left: 3rem;
+      padding-left: 30px;
    }
 
    .theme-toggle {
