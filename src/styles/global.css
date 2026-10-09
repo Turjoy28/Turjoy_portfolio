@@ -81,7 +81,7 @@ body,
 }
 
 html {
-   font-size: 62.5%;
+   font-size: 55%; /* Base shrinks from 62.5% to 55%. 1rem = 8.8px */
    scroll-behavior: smooth;
 }
 
@@ -109,12 +109,12 @@ button {
 /* ---------- Primary button ---------- */
 .btn {
    display: inline-block;
-   padding: 10px 30px;
+   padding: 1rem 3rem;
    background: var(--main-color);
    border: 2px solid var(--main-color);
-   border-radius: 40px;
-   box-shadow: 0 0 10px rgba(var(--main-color-rgb), 0.4);
-   font-size: 16px;
+   border-radius: 4rem;
+   box-shadow: 0 0 1rem rgba(var(--main-color-rgb), 0.4);
+   font-size: 1.6rem;
    color: var(--btn-text-color);
    font-weight: 600;
    transition: all 0.5s ease;
@@ -149,14 +149,24 @@ button {
 /* ---------- Responsive ---------- */
 @media (max-width: 1200px) {
    html {
-      font-size: 55%;
+      font-size: 50%; /* 1rem = 0.8rem */
+   }
+}
+
+@media (max-width: 992px) {
+   html {
+      font-size: 45%; /* 1rem = 0.72rem */
    }
 }
 
 @media (max-width: 768px) {
+   html {
+      font-size: 42%; /* 1rem = 0.67rem */
+   }
+   
    .heading {
       font-size: 4rem;
-      padding-top: 12rem;
+      padding-top: 10rem;
    }
 
    .btn {
@@ -167,7 +177,7 @@ button {
 
 @media (max-width: 576px) {
    html {
-      font-size: 52%;
+      font-size: 38%; /* 1rem = 0.61rem */
    }
 
    .heading {
@@ -178,7 +188,7 @@ button {
 
 @media (max-width: 400px) {
    html {
-      font-size: 48%;
+      font-size: 35%; /* 1rem = 0.56rem */
    }
 
    .heading {

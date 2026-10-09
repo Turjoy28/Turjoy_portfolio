@@ -1,9 +1,9 @@
 .Home {
    display: flex;
    align-items: center;
-   padding: 60px 9% 0;
+   padding: 6rem 9% 0;
    color: var(--text-color);
-   gap: 150px;
+   gap: 15rem;
    height: 100vh;
    visibility: hidden;
    opacity: 0;
@@ -76,7 +76,7 @@
 }
 
 .home-info h1 {
-   font-size: 70px;
+   font-size: 7rem;
    font-weight: bold;
    color: var(--text-color);
 }
@@ -84,8 +84,8 @@
 .home-info h2 {
    display: flex;
    align-items: baseline;
-   font-size: 32px;
-   margin-top: -10px;
+   font-size: 3.2rem;
+   margin-top: -1rem;
    position: relative;
    flex-wrap: wrap;
    color: var(--text-color);
@@ -94,14 +94,14 @@
 .home-info h2 .text-animate {
    position: relative;
    display: inline-block;
-   min-width: 280px;
+   min-width: 28rem;
    height: 1em;
-   margin-left: 10px;
+   margin-left: 1rem;
 }
 
 .home-info p {
-   font-size: 16px;
-   margin: 10px 0 25px;
+   font-size: 1.6rem;
+   margin: 1rem 0 2.5rem;
    color: var(--text-secondary);
 }
 
@@ -112,7 +112,7 @@
 }
 
 .home-info .btn-sci .sci {
-   margin-left: 20px;
+   margin-left: 2rem;
 }
 
 .home-info .btn-sci .sci a {
@@ -123,7 +123,7 @@
    height: 4rem;
    border: 2px solid var(--main-color);
    border-radius: 50%;
-   margin: 0 10px;
+   margin: 0 1rem;
    font-size: 1.8rem;
    transition: all 0.5s ease;
    color: var(--main-color);
@@ -132,7 +132,7 @@
 .home-info .btn-sci .sci a:hover {
    background: var(--main-color);
    color: #fff;
-   box-shadow: 0 0 10px rgba(var(--main-color-rgb), 0.4);
+   box-shadow: 0 0 1rem rgba(var(--main-color-rgb), 0.4);
 }
 
 /* ---------- Portrait with rotating border ---------- */
@@ -141,7 +141,7 @@
    width: 27vw;
    height: 27vw;
    border-radius: 50%;
-   padding: 4px;
+   padding: 0.4rem;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -177,14 +177,14 @@
    background: var(--img-bg-circle);
    border-radius: 50%;
    display: flex;
-   border: .5px solid var(--img-bg-circle);
+   border: 0.05rem solid var(--img-bg-circle);
    justify-content: center;
    overflow: hidden;
    z-index: 1;
 }
 
 .home-img .img-box .img-item img {
-   top: 10px;
+   top: 1rem;
    position: absolute;
    display: block;
    width: 85%;
@@ -215,14 +215,14 @@
    }
 
    .home-info h2 .text-animate {
-      margin-left: 8px;
+      margin-left: 0.8rem;
    }
 
    .home-img .img-box {
       width: 45vw;
       height: 45vw;
-      max-width: 320px;
-      max-height: 320px;
+      max-width: 32rem;
+      max-height: 32rem;
       margin-bottom: 2rem;
    }
 
@@ -245,13 +245,13 @@
 
    .home-info h2 {
       font-size: 2.4rem;
-      margin-top: -5px;
+      margin-top: -0.5rem;
       justify-content: center;
    }
 
    .home-info h2 .text-animate {
-      min-width: 200px;
-      margin-left: 7px;
+      min-width: 20rem;
+      margin-left: 0.7rem;
    }
 
    .home-info p {
@@ -262,8 +262,8 @@
    .home-img .img-box {
       width: 55vw;
       height: 55vw;
-      max-width: 280px;
-      max-height: 280px;
+      max-width: 28rem;
+      max-height: 28rem;
    }
 }
 
@@ -284,8 +284,8 @@
    }
 
    .home-info h2 .text-animate {
-      min-width: 170px;
-      margin-left: 6px;
+      min-width: 17rem;
+      margin-left: 0.6rem;
    }
 
    .home-info p {
@@ -296,8 +296,8 @@
    .home-img .img-box {
       width: 70vw;
       height: 70vw;
-      max-width: 250px;
-      max-height: 250px;
+      max-width: 25rem;
+      max-height: 25rem;
    }
 
    .home-info .btn-sci {
@@ -314,7 +314,7 @@
       width: 4.2rem;
       height: 4.2rem;
       font-size: 1.8rem;
-      margin: 0 8px;
+      margin: 0 0.8rem;
    }
 }
 
@@ -334,14 +334,14 @@
    }
 
    .home-info h2 .text-animate {
-      min-width: 145px;
-      margin-left: 5px;
+      min-width: 14.5rem;
+      margin-left: 0.5rem;
    }
 
    .home-img .img-box {
       width: 75vw;
       height: 75vw;
-      max-width: 220px;
-      max-height: 220px;
+      max-width: 22rem;
+      max-height: 22rem;
    }
 }

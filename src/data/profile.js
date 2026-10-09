@@ -34,7 +34,7 @@ export const socialLinks = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/saif-saruwar-turjoy-441741235/',
+    url: 'https://www.linkedin.com/in/saifturjoy28/',
     icon: faLinkedin,
     compactIcon: faLinkedinIn,
   },

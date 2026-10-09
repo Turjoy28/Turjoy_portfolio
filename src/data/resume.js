@@ -175,7 +175,7 @@ export const resumeTabs = [
       { label: 'Status', value: 'Unmarried' },
       { label: 'City', value: 'Dhaka' },
       { label: 'Nationality', value: 'Bangladeshi' },
-      { label: 'Experience', value: 'Fresher' },
+      { label: 'Experience', value: 'Full Stack Developer' },
       { label: 'Full Time', value: 'Available' },
       { label: 'Freelance/remote job', value: 'Available' },
       { label: 'Phone', value: '01870801955' },
