@@ -350,6 +350,17 @@
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 1600px) {
+   .portfolio-wrapper { gap: 2rem; max-width: 120rem; }
+   .portfolio-slider { max-width: 100rem; }
+   .project-card { border-radius: 2rem; min-height: 45rem; }
+   .project-image { min-height: 40rem; }
+   .project-number { font-size: 4rem; }
+   .project-content { padding: 3rem 3rem; }
+   .project-category { padding: 0.5rem 1.4rem; font-size: 1.2rem; margin-bottom: 1.5rem; }
+   .project-content h3 { font-size: 2.4rem; margin-bottom: 1.5rem; }
+   .project-content > p { font-size: 1.5rem; line-height: 1.8; margin-bottom: 2rem; padding: 1.2rem; }
+}
 
 /* For Standard Tablets */
 @media (max-width: 992px) {

@@ -119,6 +119,16 @@
 
 /* ---------- Responsive ---------- */
 
+/* For Laptops */
+@media (max-width: 1600px) {
+   .navbar { padding: 1.5rem 9%; }
+   .navbar-actions { gap: 1rem; }
+   .theme-toggle { width: 3.5rem; height: 3.5rem; font-size: 1.4rem; border: 0.2rem solid var(--main-color); }
+   .navbar #menu-icon { font-size: 2.2rem; padding: 0.6rem; }
+   .navbar .logo { font-size: 2.4rem; }
+   .navbar ul li { margin-left: 3rem; }
+   .navbar ul li a { font-size: 1.6rem; }
+}
 /* For Standard Tablets */
 @media (max-width: 992px) {
    .navbar {

@@ -87,6 +87,22 @@
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 1600px) {
+   .Services_container {
+      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+      gap: 4rem;
+      font-size: 1.6rem;
+      padding: 10rem 9%;
+   }
+   .Services_container .Services_box { padding: 3rem 2rem; border-radius: 2rem; }
+   .Services_box .icon svg { font-size: 2.5rem; }
+   .Services_box .icon a { gap: 0.6rem; padding: 0.8rem 1.6rem; }
+   .Services_box .icon a span { font-size: 1.3rem; }
+   .Services_box .icon a svg { font-size: 1.6rem; }
+   .Services_box h3 { font-size: 2.6rem; margin: .5rem 0 1.5rem; }
+   .Services_box p { font-size: 1.5rem; }
+}
+
 @media (max-width: 1200px) {
    .Services_container {
       padding-left: 5%;

@@ -255,6 +255,12 @@
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 1600px) {
+   .contact-container { gap: 4rem; max-width: 90rem; }
+   .contact-form-wrapper { padding: 2.5rem; border-radius: 1rem; }
+   .form-group textarea { min-height: 8rem; }
+}
+
 @media (max-width: 1200px) {
    .contact-container {
       padding-left: 5%;
